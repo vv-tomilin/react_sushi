@@ -9,6 +9,7 @@ import {
   RollSushiBlock,
   OtherInformation,
   SocialNetworks,
+  Categories,
 } from '../components';
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
 
       <main>
         <h1>Интернет магазин японской кухни &laquo;SushiZen&raquo;</h1>
-
+        <Categories/>
         <Filters/>
         <SelectedCategory/>
         <DiscountsBanners/>

@@ -5,6 +5,7 @@ import DiscountsBanners from './DiscountsBanners';
 import Information from './Information';
 import OtherInformation from './OtherInformation';
 import SocialNetworks from './SocialNetworks';
+import Categories from './Categories';
 import {RollSushiBlock} from './ProductBlocks';
 
 export {
@@ -16,4 +17,5 @@ export {
   RollSushiBlock,
   OtherInformation,
   SocialNetworks,
+  Categories,
 };
