@@ -5,7 +5,7 @@ import {footerLogo} from '../assets/logo and icons';
 function OtherInformation() {
   return (
     <section>
-      <h2>Дополнительная информация</h2>
+      <h2 className='visually-hidden'>Дополнительная информация</h2>
       <div>
         <img src={footerLogo} />
         <p>2021 © ИП Иванов И. И.</p>

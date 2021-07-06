@@ -3,7 +3,7 @@ import React from 'react';
 function SocialNetworks() {
   return (
     <section>
-      <h2>Мы в социальных сетях</h2>
+      <h2 className='visually-hidden'>Мы в социальных сетях</h2>
       <ul>
         <li>
           <a href='#'>Фейсбук</a>

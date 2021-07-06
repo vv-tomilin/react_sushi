@@ -8,7 +8,7 @@ import {
 function Filters() {
   return (
     <section>
-      <h2>Фильтры и сортировка</h2>
+      <h2 className='visually-hidden'>Фильтры и сортировка</h2>
       <img src={filterIcon} alt='filter_icon' />
       <p>Фильтры и сортировка</p>
       <img src={filterArrow} />

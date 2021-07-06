@@ -1,0 +1,10 @@
+.cart-wrapper {
+
+    @media (max-width: $mobile-width-only) {
+        position: absolute;
+    }
+
+    @media (min-width: $tablet-width) {
+        position: absolute;
+    }
+}

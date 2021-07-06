@@ -3,7 +3,7 @@ import React from 'react';
 function Information() {
   return (
     <section>
-      <h2>Информация</h2>
+      <h2 className='visually-hidden'>Информация</h2>
       <ul>
         <li>
           <a href='#'>Акции</a>

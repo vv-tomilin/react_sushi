@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/note
 /.vscode
 /.pnp
 .pnp.js

@@ -1,0 +1,66 @@
+@import '../_variables';
+
+.header__wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100vw;
+    height: min-content;
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $main_color_bg_blocks;
+
+    @media (max-width: $mobile-width-only) {
+        padding-top: 7px;
+        padding-bottom: 8px;
+    }
+}
+
+.header__logo-wrapper {
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $mobile-width-only) {
+        margin-left: 15px;
+    }
+}
+
+.header__phone-wrapper {
+    margin: 0;
+    padding: 0;
+
+    height: min-content;
+
+    display: flex;
+}
+
+.header__phone-label {
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 900;
+
+    height: min-content;
+
+    margin-bottom: 2px;
+}
+
+.header__phone {
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 900;
+    color: red;
+}
+
+.header__phone-text-block {
+    @media (max-width: $mobile-width-only) {
+        margin-left: 8px;
+        margin-right: 25px;
+    }
+}

@@ -18,7 +18,10 @@ const Home = () => {
       <Header/>
 
       <main>
-        <h1>Интернет магазин японской кухни &laquo;SushiZen&raquo;</h1>
+        <h1 className='visually-hidden'>
+          Интернет магазин японской кухни &laquo;SushiZen&raquo;
+        </h1>
+
         <Categories/>
         <Filters/>
         <SelectedCategory/>
@@ -26,7 +29,9 @@ const Home = () => {
         <Information/>
 
         <section>
-          <h2>Список товаров выбранной категории</h2>
+          <h2 className='visually-hidden'>
+            Список товаров выбранной категории
+          </h2>
           <ul>
             <li>
               <RollSushiBlock/>

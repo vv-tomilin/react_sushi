@@ -2,30 +2,43 @@ import React from 'react';
 
 import {
   logo,
-  cityIcon,
   cartIcon,
+  phoneIcon,
 } from '../assets/logo and icons';
 
 function Header() {
   return (
-    <div>
-      <header className='page-header'>
-        <img src={logo} alt='logo'/>
-        <div>
-          <img src={cityIcon} alt='location_ico' />
-          <a href='#'>Пермь</a>
-          <a href='#'>+7(342)000-00-00</a>
+    <header>
+      <div className="header__wrapper">
+        <div className='header'>
+          <div className='header__logo-wrapper'>
+            <img
+              className='header__logo'
+              src={logo} alt='logo'
+              width='91' height='59' />
+          </div>
+
+          <div className='header__phone-wrapper'>
+            <img src={phoneIcon} alt='phone_icon' width='28' height='28'/>
+            <div className='header__phone-text-block'>
+              <p className='header__phone-label'>Служба доставки</p>
+              <p className='header__phone'>
+              +7(999)000-99-99
+              </p>
+            </div>
+          </div>
         </div>
-        <ul>
-          <li>
-            <a href='#' >
-              <img src={cartIcon} alt='cart_icon' />
-              <p>Корзина</p>
-            </a>
-          </li>
-        </ul>
-      </header>
-    </div>
+      </div>
+
+      <ul className='visually-hidden'>
+        <li className='cart-wrapper'>
+          <a href='#' >
+            <img src={cartIcon} alt='cart_icon' />
+            <p>Корзина</p>
+          </a>
+        </li>
+      </ul>
+    </header>
   );
 }
 

@@ -5,7 +5,7 @@ import bannerMob from '../assets/images/banner_mob.jpg';
 function DiscountsBanners() {
   return (
     <section>
-      <h2>Баннеры проходящих акций и скидок</h2>
+      <h2 className='visually-hidden'>Баннеры проходящих акций и скидок</h2>
       <img src={bannerMob} />
       <div>
         <button></button>
