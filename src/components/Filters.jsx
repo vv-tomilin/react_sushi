@@ -9,9 +9,11 @@ function Filters() {
   return (
     <section>
       <h2 className='visually-hidden'>Фильтры и сортировка</h2>
-      <img src={filterIcon} alt='filter_icon' />
-      <p>Фильтры и сортировка</p>
-      <img src={filterArrow} />
+      <dif className="filters">
+        <img src={filterIcon} alt='filter_icon' width='22' height='19'/>
+        <p className='filters__text'>Фильтры и сортировка</p>
+        <img src={filterArrow} alt='' width='14' height='9'/>
+      </dif>
     </section>
   );
 }

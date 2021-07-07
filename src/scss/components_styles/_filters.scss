@@ -1,0 +1,22 @@
+@import '../variables';
+
+.filters {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-color: $main_color_bg_blocks;
+
+    @media (max-width: $mobile-width-only) {
+        height: 70px;
+
+        &__text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
