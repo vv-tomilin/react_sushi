@@ -1,0 +1,20 @@
+@import '../variables';
+
+.selected-category {
+
+    padding-top: 17px;
+    padding-bottom: 20px;
+
+    background-color: #e9e9e9;
+
+    text-align: center;
+    
+    &__text {
+        font-family: 'Pusia';
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+}

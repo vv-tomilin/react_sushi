@@ -2,9 +2,9 @@ import React from 'react';
 
 function SelectedCategory() {
   return (
-    <section>
+    <section className='selected-category'>
       <h2 className='visually-hidden'>Выбранная категория</h2>
-      <p>Роллы и суши</p>
+      <p className='selected-category__text'>Роллы и суши</p>
     </section>
   );
 }
