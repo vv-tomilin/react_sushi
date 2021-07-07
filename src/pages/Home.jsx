@@ -6,7 +6,7 @@ import {
   SelectedCategory,
   DiscountsBanners,
   Information,
-  RollSushiBlock,
+  ProductsListBlock,
   OtherInformation,
   SocialNetworks,
   Categories,
@@ -27,20 +27,7 @@ const Home = () => {
         <SelectedCategory/>
         <DiscountsBanners/>
         <Information/>
-
-        <section>
-          <h2 className='visually-hidden'>
-            Список товаров выбранной категории
-          </h2>
-          <ul>
-            <li>
-              <RollSushiBlock/>
-            </li>
-            <li>
-              <RollSushiBlock/>
-            </li>
-          </ul>
-        </section>
+        <ProductsListBlock/>
       </main>
 
       <footer>
