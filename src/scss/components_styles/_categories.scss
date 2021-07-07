@@ -1,0 +1,39 @@
+@import '../variables';
+
+.categories {
+
+    @media (max-width: $tablet-width) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            width: 0;
+    }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        padding-top: 18px;
+        padding-bottom: 18px;
+        width: max-content;
+
+        background-color: $additional_color_bg_font;
+    }
+
+    &__list-item {
+        margin-left: 20px;
+
+        font-weight: 700;
+        
+        &:last-child {
+            margin-right: 35px;
+        }
+
+        &_active {
+            color: white;
+        }
+    }
+}

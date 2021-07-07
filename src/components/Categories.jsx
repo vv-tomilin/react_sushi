@@ -2,16 +2,19 @@ import React from 'react';
 
 function Categories() {
   return (
-    <section>
+    <section className='categories'>
       <h2 className='visually-hidden'>Фильтр категорий</h2>
-      <ul>
-        <li>Роллы и суши</li>
-        <li>Сеты</li>
-        <li>WOK</li>
-        <li>Горячее и салаты</li>
-        <li>Комбо</li>
-        <li>Детское меню</li>
-        <li>Фирменное меню</li>
+      <ul className='categories__list'>
+        <li
+          className='categories__list-item categories__list-item_active'>
+            Роллы и суши
+        </li>
+        <li className='categories__list-item'>Сеты</li>
+        <li className='categories__list-item'>WOK</li>
+        <li className='categories__list-item'>Горячее и салаты</li>
+        <li className='categories__list-item'>Комбо</li>
+        <li className='categories__list-item'>Детское меню</li>
+        <li className='categories__list-item'>Фирменное меню</li>
       </ul>
     </section>
   );
