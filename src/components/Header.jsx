@@ -31,7 +31,7 @@ function Header() {
       </div>
 
       <ul className='visually-hidden'>
-        <li className='cart-wrapper'>
+        <li className='header__cart-wrapper'>
           <a href='#' >
             <img src={cartIcon} alt='cart_icon' />
             <p>Корзина</p>
