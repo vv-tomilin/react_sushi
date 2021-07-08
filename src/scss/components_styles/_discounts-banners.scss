@@ -3,10 +3,15 @@
 .discounts-bunners {
 
     position: relative;
+    background-color: $main_color_bg_blocks;
 
     &__bunner {
         width: 100vw;
         height: auto;
+    }
+
+    &__bunner-item {
+        height: min-content;
     }
 
     &__toggles {

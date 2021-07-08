@@ -8,7 +8,7 @@ function DiscountsBanners() {
       <h2 className='visually-hidden'>Баннеры проходящих акций и скидок</h2>
 
       <ul>
-        <li>
+        <li className='discounts-bunners__bunner-item'>
           <img className='discounts-bunners__bunner' src={bannerMob} alt=''/>
         </li>
       </ul>
