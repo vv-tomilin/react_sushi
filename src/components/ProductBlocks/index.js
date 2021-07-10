@@ -1,3 +1,3 @@
-import RollSushiBlock from './RollSushiBlock';
+import ProductBlock from './ProductBlock';
 
-export {RollSushiBlock};
+export {ProductBlock};

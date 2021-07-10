@@ -7,7 +7,8 @@ import OtherInformation from './OtherInformation';
 import SocialNetworks from './SocialNetworks';
 import Categories from './Categories';
 import ProductsListBlock from './ProductsListBlock';
-import {RollSushiBlock} from './ProductBlocks';
+import {ProductBlock} from './ProductBlocks';
+import Button from './Button';
 
 export {
   Header,
@@ -15,9 +16,10 @@ export {
   SelectedCategory,
   DiscountsBanners,
   Information,
-  RollSushiBlock,
+  ProductBlock,
   OtherInformation,
   SocialNetworks,
   Categories,
   ProductsListBlock,
+  Button,
 };

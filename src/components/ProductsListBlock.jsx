@@ -1,19 +1,19 @@
 import React from 'react';
 
-import {RollSushiBlock} from '../components';
+import {ProductBlock} from '../components';
 
 function ProductsListBlock() {
   return (
-    <section>
+    <section className='product-block'>
       <h2 className='visually-hidden'>
             Список товаров выбранной категории
       </h2>
       <ul>
         <li>
-          <RollSushiBlock/>
+          <ProductBlock/>
         </li>
         <li>
-          <RollSushiBlock/>
+          <ProductBlock/>
         </li>
       </ul>
     </section>

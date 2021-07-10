@@ -1,0 +1,37 @@
+@import '../variables';
+
+.button {
+
+    background-color: $additional_color_bg_font;
+
+    height: 45px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border: none;
+    border-radius: 50px;
+
+    &_add {
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        
+        span {
+            font-family: 'Roboto';
+            font-size: 14px;
+            font-weight: 900;
+            color: $main_color_bg_blocks;
+
+            margin-right: 8px;
+        }
+    }
+
+    &_ingridients-info {
+
+        width: 45px;
+        height: 45px;
+    }
+}
