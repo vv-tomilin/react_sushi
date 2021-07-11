@@ -4,7 +4,7 @@ import {ProductBlock} from '../components';
 
 function ProductsListBlock() {
   return (
-    <section className='product-block'>
+    <section className='product-list-block'>
       <h2 className='visually-hidden'>
             Список товаров выбранной категории
       </h2>

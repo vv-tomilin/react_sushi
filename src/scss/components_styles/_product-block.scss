@@ -2,7 +2,58 @@
 
 .product-block {
 
-    background-color: $product-list-block_bg;
+    width: 94%;
 
-    padding-top: 10px;
+    @media (max-width: $mobile-width-only) {
+        margin: 0 auto;
+
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+
+        margin-top: 20px;
+    }
+
+    &__short-description {
+
+        margin-top: 11px;
+        margin-bottom: 25px;
+
+        display: flex;
+        justify-content: flex-start;
+
+        font-family: 'Roboto';
+        font-size: 14px;
+        font-weight: 100;
+        color: rgba(0, 0, 0, 0.45);
+
+        span {
+            margin-left: 65px;
+        }
+    }
+
+    &__price {
+        height: 45px;
+
+        font-size: 36px;
+        font-weight: 700;
+
+        padding-left: 5px;
+        padding-right: 5px;
+
+        background-color: rgba(0, 0, 0, 0.07);
+
+        border-radius: 10px;
+    }
+
+    &__price-addcart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

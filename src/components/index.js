@@ -9,6 +9,8 @@ import Categories from './Categories';
 import ProductsListBlock from './ProductsListBlock';
 import {ProductBlock} from './ProductBlocks';
 import Button from './Button';
+import Footer from './Footer';
+import CartButton from './CartButton';
 
 export {
   Header,
@@ -22,4 +24,6 @@ export {
   Categories,
   ProductsListBlock,
   Button,
+  Footer,
+  CartButton,
 };

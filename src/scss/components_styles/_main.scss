@@ -1,9 +1,11 @@
-@import './header';
+@import './_header';
 @import './_categories';
-@import './filters';
-@import './selected-category';
+@import './_filters';
+@import './_selected-category';
 @import './_discounts-banners';
-@import './information';
+@import './_information';
+@import './_product-list-block';
 @import './product-block';
-@import './roll-sushi-block';
 @import './_button';
+@import './_footer';
+@import './_cart-button';

@@ -64,14 +64,10 @@
         }
     }
 
-    &__cart-wrapper {
+    &__cart-button {
 
-        @media (max-width: $mobile-width-only) {
-            position: absolute;
-        }
-    
-        @media (min-width: $tablet-width) {
-            position: absolute;
+        @media (max-width: $tablet-width) {
+            display: none;
         }
     }
 }

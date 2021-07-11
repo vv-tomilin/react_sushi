@@ -11,6 +11,6 @@ function Button({children, className}) {
 export default Button;
 
 Button.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.any,
   className: PropTypes.string.isRequired,
 };

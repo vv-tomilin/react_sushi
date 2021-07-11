@@ -7,11 +7,11 @@ import {iSymbol, cartIconWhite} from '../../assets/logo and icons';
 
 function ProductBlock() {
   return (
-    <div className='roll-sushi-block__wrapper'>
-      <div className='roll-sushi-block'>
-        <img src={rollFudzi} />
+    <div className='product-block__wrapper'>
+      <div className='product-block'>
+        <img className='product-block__img' src={rollFudzi} />
         <h3>Ролл Фудзи</h3>
-        <div className='roll-sushi-block__short-description'>
+        <div className='product-block__short-description'>
           <p>
               Лосось копченый, рис,<br/>
               свежий огурец, соус “лава”, <br/>
@@ -19,8 +19,8 @@ function ProductBlock() {
           </p>
           <span>230 г.</span>
         </div>
-        <div className='roll-sushi-block__price-addcart'>
-          <p className='roll-sushi-block__price'>
+        <div className='product-block__price-addcart'>
+          <p className='product-block__price'>
             159₽
           </p>
           <Button className='button_ingridients-info'>

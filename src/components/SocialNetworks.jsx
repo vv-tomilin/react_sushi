@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function SocialNetworks() {
+function SocialNetworks({className}) {
   return (
-    <section>
+    <section className={className}>
       <h2 className='visually-hidden'>Мы в социальных сетях</h2>
       <ul>
         <li>
@@ -26,3 +27,7 @@ function SocialNetworks() {
 }
 
 export default SocialNetworks;
+
+SocialNetworks.propTypes = {
+  className: PropTypes.string,
+};

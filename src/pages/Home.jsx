@@ -7,9 +7,8 @@ import {
   DiscountsBanners,
   Information,
   ProductsListBlock,
-  OtherInformation,
-  SocialNetworks,
   Categories,
+  Footer,
 } from '../components';
 
 const Home = () => {
@@ -30,10 +29,7 @@ const Home = () => {
         <ProductsListBlock/>
       </main>
 
-      <footer>
-        <OtherInformation/>
-        <SocialNetworks/>
-      </footer>
+      <Footer/>
     </div>
   );
 };

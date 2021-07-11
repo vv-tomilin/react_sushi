@@ -1,8 +1,9 @@
 import React from 'react';
 
+import {CartButton} from './';
+
 import {
   logo,
-  cartIcon,
   phoneIcon,
 } from '../assets/logo and icons';
 
@@ -30,14 +31,9 @@ function Header() {
         </div>
       </div>
 
-      <ul className='visually-hidden'>
-        <li className='header__cart-wrapper'>
-          <a href='#' >
-            <img src={cartIcon} alt='cart_icon' />
-            <p>Корзина</p>
-          </a>
-        </li>
-      </ul>
+      <div className='header__cart-button'>
+        <CartButton/>
+      </div>
     </header>
   );
 }

@@ -1,0 +1,43 @@
+@import '../variables';
+
+.cart-button {
+    position: relative;
+
+    &__count {
+
+        padding: 2px 5px;
+
+        color: $main_color_bg_blocks;
+
+        &-wrapper {
+
+            position: absolute;
+            bottom: 23px;
+            left: 20px;
+
+            width: min-content;
+            height: min-content;
+
+            background-color: $additional_color_bg_font;
+
+            border-radius: 50px;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        right: 45px;
+        top: 11px;
+
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.6);
+
+        padding: 2px 5px;
+
+        border-radius: 50px;
+
+        background: rgba(0, 0, 0, 0.07);
+    }
+}

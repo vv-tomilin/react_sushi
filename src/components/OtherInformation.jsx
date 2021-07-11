@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {footerLogo} from '../assets/logo and icons';
 
-function OtherInformation() {
+function OtherInformation({className}) {
   return (
-    <section>
+    <section className={className}>
       <h2 className='visually-hidden'>Дополнительная информация</h2>
       <div>
         <img src={footerLogo} />
@@ -45,3 +46,7 @@ function OtherInformation() {
 }
 
 export default OtherInformation;
+
+OtherInformation.propTypes = {
+  className: PropTypes.string,
+};
