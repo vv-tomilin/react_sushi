@@ -6,4 +6,17 @@
 
     padding-top: 10px;
     padding-bottom: 20px;
+
+    &__list {
+        @media (min-width: $tablet-width) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        @media (min-width: $tablet-width) {
+            width: 50%;
+        }
+    }
 }

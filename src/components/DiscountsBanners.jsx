@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import bannerMob from '../assets/images/banner_mob.jpg';
 
-function DiscountsBanners() {
+function DiscountsBanners({className}) {
   return (
     <section className='discounts-bunners'>
       <h2 className='visually-hidden'>Баннеры проходящих акций и скидок</h2>
@@ -36,3 +37,7 @@ function DiscountsBanners() {
 }
 
 export default DiscountsBanners;
+
+DiscountsBanners.propTypes = {
+  className: PropTypes.string,
+};

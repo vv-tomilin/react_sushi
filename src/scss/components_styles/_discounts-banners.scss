@@ -8,6 +8,10 @@
     &__bunner {
         width: 100vw;
         height: auto;
+
+        @media (min-width: $tablet-width) {
+            height: 22vh;
+        }
     }
 
     &__bunner-item {

@@ -12,7 +12,7 @@
 
     background-color: $main_color_bg_blocks;
 
-    @media (max-width: $mobile-width-only) {
+    @media (max-width: $tablet-width) {
         padding-top: 7px;
         padding-bottom: 8px;
     }
@@ -26,7 +26,7 @@
         margin: 0;
         padding: 0;
     
-        @media (max-width: $mobile-width-only) {
+        @media (max-width: $tablet-width) {
             margin-left: 15px;
         }
     }
@@ -58,7 +58,7 @@
     }
 
     &__phone-text-block {
-        @media (max-width: $mobile-width-only) {
+        @media (max-width: $tablet-width) {
             margin-left: 8px;
             margin-right: 25px;
         }

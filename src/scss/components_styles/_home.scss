@@ -1,0 +1,36 @@
+@import '../variables';
+
+.home {
+
+    @media (min-width: $tablet-width) {
+        &__filters-select-category-wrapper {
+            display: flex;
+            justify-content: space-between
+        }
+    
+        &__filters-wrapper {
+
+            width: 100%;
+            order: 1;
+        }
+
+        &__selected-category-wrapper {
+
+            width: 100%;
+        }
+
+        &__banners-information-wrapper {
+            display: flex;
+            justify-content: space-between
+        }
+
+        &__banners-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__information-wrapper {
+            width: 100%;
+        }
+    }
+}

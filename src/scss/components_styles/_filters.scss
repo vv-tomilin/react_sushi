@@ -9,9 +9,9 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    background-color: $main_color_bg_blocks;
+    background-color: $product-list-block_bg;
 
-    @media (max-width: $mobile-width-only) {
+    @media (max-width: $tablet-width) {
         height: 70px;
 
         &__text {

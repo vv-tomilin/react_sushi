@@ -8,11 +8,23 @@ function ProductsListBlock() {
       <h2 className='visually-hidden'>
             Список товаров выбранной категории
       </h2>
-      <ul>
-        <li>
+      <ul className='product-list-block__list'>
+        <li className='product-list-block__item'>
           <ProductBlock/>
         </li>
-        <li>
+        <li className='product-list-block__item'>
+          <ProductBlock/>
+        </li>
+        <li className='product-list-block__item'>
+          <ProductBlock/>
+        </li>
+        <li className='product-list-block__item'>
+          <ProductBlock/>
+        </li>
+        <li className='product-list-block__item'>
+          <ProductBlock/>
+        </li>
+        <li className='product-list-block__item'>
           <ProductBlock/>
         </li>
       </ul>
