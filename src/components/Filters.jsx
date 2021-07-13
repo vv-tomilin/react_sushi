@@ -10,9 +10,15 @@ function Filters() {
     <section>
       <h2 className='visually-hidden'>Фильтры и сортировка</h2>
       <div className="filters">
-        <img src={filterIcon} alt='filter_icon' width='22' height='19'/>
+        <img
+          className='filters__icon'
+          src={filterIcon} alt='filter_icon'
+          width='22' height='19'/>
         <p className='filters__text'>Фильтры и сортировка</p>
-        <img src={filterArrow} alt='' width='14' height='9'/>
+        <img
+          className='filters__arrow'
+          src={filterArrow} alt=''
+          width='14' height='9'/>
       </div>
     </section>
   );

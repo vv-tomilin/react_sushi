@@ -14,7 +14,7 @@ function ProductBlock() {
         <div className='product-block__short-description'>
           <p>
               Лосось копченый, рис,<br/>
-              свежий огурец, соус “лава”, <br/>
+              свежий огурец, соус “лава”,<br/>
               зеленый лук, омлет, кунж...
           </p>
           <span>230 г.</span>

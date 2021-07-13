@@ -2,9 +2,12 @@
 
 .product-block {
 
-    width: 94%;
+    width: max-content;
 
     @media (max-width: $tablet-width) {
+
+        width: 94%;
+
         margin: 0 auto;
 
         &__img {
@@ -31,6 +34,18 @@
         font-size: 14px;
         font-weight: 100;
         color: rgba(0, 0, 0, 0.45);
+
+        @media (max-width: $tablet-width) {
+            p {
+                width: 57%;
+            }
+        }
+
+        @media (min-width: $desktop-width) {
+            p {
+                width: 60%;
+            }
+        }
 
         span {
             margin-left: 65px;

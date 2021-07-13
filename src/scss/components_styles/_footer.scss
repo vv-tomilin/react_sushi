@@ -2,10 +2,10 @@
 
 .footer {
 
-    position: sticky;
-    bottom: -1px;
-
     @media (max-width: $tablet-width) {
+
+        position: sticky;
+        bottom: -1px;
 
         height: 70px;
         width: 100%;

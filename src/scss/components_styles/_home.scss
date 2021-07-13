@@ -5,7 +5,8 @@
     @media (min-width: $tablet-width) {
         &__filters-select-category-wrapper {
             display: flex;
-            justify-content: space-between
+            justify-content: space-between;
+            align-items: center;
         }
     
         &__filters-wrapper {
@@ -31,6 +32,31 @@
 
         &__information-wrapper {
             width: 100%;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+
+        &__filters-select-category-wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            background-color: $main_color_bg_blocks;
+        }
+
+        &__filters-wrapper {
+
+            width: max-content;
+            order: 1;
+        }
+
+        &__selected-category-wrapper {
+
+            width: max-content;
+        }
+
+        &__information-wrapper {
+            display: none;
         }
     }
 }

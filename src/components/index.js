@@ -3,6 +3,7 @@ import Filters from './Filters';
 import SelectedCategory from './SelectedCategory';
 import DiscountsBanners from './DiscountsBanners';
 import Information from './Information';
+import InformationDesktop from './InformationDesktop';
 import OtherInformation from './OtherInformation';
 import SocialNetworks from './SocialNetworks';
 import Categories from './Categories';
@@ -18,6 +19,7 @@ export {
   SelectedCategory,
   DiscountsBanners,
   Information,
+  InformationDesktop,
   ProductBlock,
   OtherInformation,
   SocialNetworks,

@@ -4,18 +4,16 @@
 
     box-shadow: 0px 8px 9px -6px rgba(34, 60, 80, 0.18);
 
-    @media (max-width: $tablet-width) {
+    position: sticky;
+    top: -1px;
+    
+    z-index: 10;
 
-        position: sticky;
-        top: -1px;
-        z-index: 10;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
-        overflow-x: scroll;
-        overflow-y: hidden;
-
-        &::-webkit-scrollbar {
-            width: 0;
-        }
+    &::-webkit-scrollbar {
+        width: 0;
     }
 
     background-color: $additional_color_bg_font;
@@ -32,11 +30,21 @@
 
     &__list-item {
 
-        margin-left: 20px;
+        @media (max-width: $tablet-width) {
+            margin-left: 20px;
 
-        font-size: 14px;
-        line-height: 14px;
-        font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 700;
+        }
+
+        @media (min-width: $desktop-width) {
+            margin-left: 55px;
+
+            font-size: 24px;
+            line-height: 24px;
+            font-weight: 900;
+        }
         
         &:last-child {
             margin-right: 35px;

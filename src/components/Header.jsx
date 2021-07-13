@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {CartButton} from './';
+import {CartButton, InformationDesktop} from './';
 
 import {
   logo,
@@ -20,7 +20,10 @@ function Header() {
           </div>
 
           <div className='header__phone-wrapper'>
-            <img src={phoneIcon} alt='phone_icon' width='28' height='28'/>
+            <img
+              className='header__phone-icon'
+              src={phoneIcon} alt='phone_icon'
+              width='28' height='28'/>
             <div className='header__phone-text-block'>
               <p className='header__phone-label'>Служба доставки</p>
               <p className='header__phone'>
@@ -28,11 +31,13 @@ function Header() {
               </p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className='header__cart-button'>
-        <CartButton/>
+          <InformationDesktop/>
+
+          <div className='header__cart-button'>
+            <CartButton className='cart-button'/>
+          </div>
+        </div>
       </div>
     </header>
   );

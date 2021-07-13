@@ -1,6 +1,11 @@
 @import '../variables';
 
 .cart-button {
+
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+
     position: relative;
 
     &__count {

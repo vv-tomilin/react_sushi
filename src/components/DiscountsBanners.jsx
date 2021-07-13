@@ -1,16 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import bannerMob from '../assets/images/banner_mob.jpg';
+import bannerDesktop from '../assets/images/banner_desktop.jpg';
 
-function DiscountsBanners({className}) {
+function DiscountsBanners() {
   return (
     <section className='discounts-bunners'>
       <h2 className='visually-hidden'>Баннеры проходящих акций и скидок</h2>
 
       <ul>
         <li className='discounts-bunners__bunner-item'>
-          <img className='discounts-bunners__bunner' src={bannerMob} alt=''/>
+          <img
+            className='discounts-bunners__bunner-mob'
+            src={bannerMob} alt=''/>
+        </li>
+        <li className='discounts-bunners__bunner-item'>
+          <img
+            className='discounts-bunners__bunner-desktop'
+            src={bannerDesktop} alt=''/>
         </li>
       </ul>
 
@@ -37,7 +44,3 @@ function DiscountsBanners({className}) {
 }
 
 export default DiscountsBanners;
-
-DiscountsBanners.propTypes = {
-  className: PropTypes.string,
-};

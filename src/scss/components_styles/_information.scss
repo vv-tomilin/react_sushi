@@ -3,6 +3,10 @@
 .information {
     background-color: $main_color_bg_blocks;
 
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+
     &__item {
         display: flex;
         flex-wrap: nowrap;

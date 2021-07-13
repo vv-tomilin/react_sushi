@@ -19,4 +19,19 @@
 
         text-transform: uppercase;
     }
+
+    @media (min-width: $desktop-width) {
+        background-color: transparent;
+
+        padding-left: 35px;
+
+        &__text {
+            font-family: 'Pusia';
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 700;
+    
+            text-transform: uppercase;
+        }
+    }
 }

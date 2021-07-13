@@ -17,7 +17,12 @@
         padding-bottom: 8px;
     }
 
-    &__wrapper {
+    @media (min-width: $desktop-width) {
+        padding-top: 7px;
+        padding-bottom: 8px;
+    }
+
+    &__mobile-wrapper {
         margin: 0;
         padding: 0;
     }
@@ -28,6 +33,10 @@
     
         @media (max-width: $tablet-width) {
             margin-left: 15px;
+        }
+
+        @media (min-width: $desktop-width) {
+            margin-left: 20px;
         }
     }
 
@@ -48,6 +57,10 @@
         height: min-content;
     
         margin-bottom: 2px;
+
+        @media (min-width: $desktop-width) {
+            font-size: 18px;
+        }
     }
 
     &__phone {
@@ -55,19 +68,32 @@
         font-size: 12px;
         font-weight: 900;
         color: red;
+
+        @media (min-width: $desktop-width) {
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &__phone-icon {
+            width: 46px;
+            height: 46px;
+        }
     }
 
     &__phone-text-block {
-        @media (max-width: $tablet-width) {
             margin-left: 8px;
             margin-right: 25px;
-        }
     }
 
     &__cart-button {
 
         @media (max-width: $tablet-width) {
             display: none;
+        }
+
+        @media (min-width: $desktop-width) {
+            margin-right: 30px;
         }
     }
 }

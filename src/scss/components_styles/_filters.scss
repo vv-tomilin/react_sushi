@@ -19,4 +19,26 @@
             font-weight: 500;
         }
     }
+
+    @media (min-width: $desktop-width) {
+
+        padding-right: 35px;
+
+        background-color: transparent;
+
+        &__text {
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        &__icon {
+            order: 2;
+
+            margin-left: 25px;
+        }
+
+        &__arrow {
+            display: none;
+        }
+    }
 }

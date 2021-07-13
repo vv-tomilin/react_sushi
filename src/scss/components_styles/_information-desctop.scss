@@ -1,0 +1,23 @@
+
+.information-desktop {
+
+    @media (max-width: $tablet-width) {
+        display: none;
+    }
+
+    &__list {
+        font-family: 'Roboto';
+        font-size: 24px;
+        font-weight: 300;
+
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 24px;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
