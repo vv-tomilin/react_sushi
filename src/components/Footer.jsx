@@ -11,8 +11,8 @@ function Footer() {
           <CartButton className='cart-button'/>
         </div>
       </div>
-      <OtherInformation className='footer__other-info'/>
-      <SocialNetworks className='footer__social'/>
+      <OtherInformation className='footer'/>
+      <SocialNetworks className='footer'/>
     </footer>
   );
 }

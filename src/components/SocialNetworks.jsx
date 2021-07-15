@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function SocialNetworks({className}) {
   return (
-    <section className={className}>
+    <section className={`${className}__social`}>
       <h2 className='visually-hidden'>Мы в социальных сетях</h2>
-      <ul>
+      <ul className={`${className}__social-list`}>
         <li>
           <a href='#'>Фейсбук</a>
         </li>

@@ -49,4 +49,55 @@
         }
 
     }
+
+    @media (min-width: $desktop-width) {
+        background: #000;
+
+        * {
+            font-size: 18px;
+            color: white;
+        }
+
+        &__other-info {
+            display: flex;
+            justify-content: space-between;
+
+            &-logo {
+                display: flex;
+
+                p {
+                    margin-left: 15px;
+                    margin-top: 26px;
+                }
+
+                img {
+                    width: 35px;
+                    height: 35px;
+
+                    margin-left: 30px;
+                    margin-top: 21px;
+                }
+            }
+
+            &-blocks {
+                margin-top: 26px;
+
+                &-item {
+                    margin-top: 15px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            &-about-site {
+                margin-right: 30px;
+            }
+        }
+
+        &__social-list {
+            display: flex;
+        }
+    }
 }
