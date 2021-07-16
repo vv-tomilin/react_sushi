@@ -34,7 +34,7 @@ function Header() {
 
           <InformationDesktop/>
 
-          <div className='header__cart-button'>
+          <div className='header__cart-button-wrapper'>
             <CartButton className='cart-button'/>
           </div>
         </div>
