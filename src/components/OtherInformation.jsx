@@ -8,8 +8,11 @@ function OtherInformation({className}) {
     <section className={`${className}__other-info`}>
       <h2 className='visually-hidden'>Дополнительная информация</h2>
       <div className={`${className}__other-info-logo`}>
-        <img src={footerLogo} />
-        <p>2021 © ИП Иванов И. И.</p>
+        <img className={`${className}__other-info-logo-img`} src={footerLogo} />
+        <p
+          className={`${className}__other-info-logo-text`}>
+          2021 © ИП Иванов И. И.
+        </p>
       </div>
 
       <div className={`${className}__other-info-blocks`}>

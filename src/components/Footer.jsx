@@ -12,6 +12,7 @@ function Footer() {
         </div>
       </div>
       <OtherInformation className='footer'/>
+      <hr className='footer__line'/>
       <SocialNetworks className='footer'/>
     </footer>
   );
