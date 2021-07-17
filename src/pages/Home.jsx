@@ -1,4 +1,7 @@
 import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {fetchProducts} from '../redux/actions/products';
 
 import {
   Header,
@@ -12,6 +15,16 @@ import {
 } from '../components';
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  const items = useSelector(({products}) => products.items);
+
+  React.useEffect(() => {
+    fetchProducts(dispatch);
+  }, []);
+
+  console.log(items);
+
   return (
     <div>
       <Header/>
