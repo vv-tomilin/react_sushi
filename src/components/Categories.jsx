@@ -12,7 +12,6 @@ function Categories() {
         <li className='categories__list-item'>Сеты</li>
         <li className='categories__list-item'>WOK</li>
         <li className='categories__list-item'>Горячее и салаты</li>
-        <li className='categories__list-item'>Комбо</li>
         <li className='categories__list-item'>Детское меню</li>
         <li className='categories__list-item'>Фирменное меню</li>
       </ul>
