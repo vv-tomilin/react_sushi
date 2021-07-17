@@ -1,7 +1,9 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+
+import {useSelector, useDispatch} from 'react-redux';
 
 import {fetchProducts} from '../redux/actions/products';
+import {setCategory} from '../redux/actions/category';
 
 import {
   Header,
@@ -14,16 +16,27 @@ import {
   Footer,
 } from '../components';
 
+const categoriesNames = [
+  'Роллы и суши',
+  'Сеты',
+  'WOK',
+  'Горячее и салаты',
+  'Детское меню',
+  'Фирменное меню',
+];
+
 const Home = () => {
   const dispatch = useDispatch();
 
-  const items = useSelector(({products}) => products.items);
+  const {category} = useSelector(({category}) => category);
 
   React.useEffect(() => {
-    fetchProducts(dispatch);
-  }, []);
+    dispatch(fetchProducts(category));
+  }, [category]);
 
-  console.log(items);
+  const onSelectCategory = (index) => {
+    dispatch(setCategory(index));
+  };
 
   return (
     <div>
@@ -34,7 +47,11 @@ const Home = () => {
           Интернет магазин японской кухни &laquo;SushiZen&raquo;
         </h1>
 
-        <Categories/>
+        <Categories
+          activeCategory = {category}
+          items={categoriesNames}
+          onClickCategory={onSelectCategory}/>
+
         <div className='home__filters-select-category-wrapper'>
           <div className='home__filters-wrapper'>
             <Filters/>
