@@ -1,27 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Button from '../Button';
 
-import rollFudzi from '../../assets/images/roll_fudzi.jpg';
 import {iSymbol, cartIconWhite} from '../../assets/logo and icons';
 
-function ProductBlock() {
+function ProductBlock({name, imageURL, price, ingridients, weight}) {
   return (
     <div className='product-block__wrapper'>
       <div className='product-block'>
-        <img className='product-block__img' src={rollFudzi} />
-        <h3>Ролл Фудзи</h3>
+        <img className='product-block__img' src={imageURL} />
+        <h3>{name}</h3>
         <div className='product-block__short-description'>
           <p>
-              Лосось копченый, рис,
-              свежий огурец, соус “лава”,
-              зеленый лук, омлет, кунж...
+            {ingridients}
           </p>
-          <span>230 г.</span>
+          <span>{weight} г.</span>
         </div>
         <div className='product-block__price-addcart'>
           <p className='product-block__price'>
-            159₽
+            {price}₽
           </p>
           <Button className='button_ingridients-info'>
             <img src={iSymbol} alt=''/>
@@ -37,3 +35,11 @@ function ProductBlock() {
 }
 
 export default ProductBlock;
+
+ProductBlock.propTypes = {
+  name: PropTypes.string.isRequired,
+  imageURL: PropTypes.string,
+  price: PropTypes.number,
+  ingridients: PropTypes.string,
+  weight: PropTypes.number,
+};

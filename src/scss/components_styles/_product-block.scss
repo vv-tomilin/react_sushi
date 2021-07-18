@@ -17,13 +17,8 @@
         &__img {
             width: 100%;
             height: auto;
-        }
-    }
 
-    @media (min-width: $desktop-width-middle) {
-        &__img {
-            width: 100%;
-            height: auto;
+            border-radius: 10px;
         }
     }
 
@@ -31,6 +26,8 @@
         &__img {
             width: 100%;
             height: auto;
+
+            border-radius: 10px;
         }
     }
 

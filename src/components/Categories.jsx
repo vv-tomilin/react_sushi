@@ -18,15 +18,6 @@ function Categories({items, activeCategory, onClickCategory}) {
             </li>
           ))
         }
-        {/* <li
-          className='categories__list-item categories__list-item_active'>
-            Роллы и суши
-        </li>
-        <li className='categories__list-item'>Сеты</li>
-        <li className='categories__list-item'>WOK</li>
-        <li className='categories__list-item'>Горячее и салаты</li>
-        <li className='categories__list-item'>Детское меню</li>
-        <li className='categories__list-item'>Фирменное меню</li> */}
       </ul>
     </section>
   );

@@ -28,6 +28,7 @@ const categoriesNames = [
 const Home = () => {
   const dispatch = useDispatch();
 
+  const items = useSelector(({products}) => products.items);
   const {category} = useSelector(({category}) => category);
 
   React.useEffect(() => {
@@ -68,7 +69,7 @@ const Home = () => {
             <Information/>
           </div>
         </div>
-        <ProductsListBlock/>
+        <ProductsListBlock items={items}/>
       </main>
 
       <Footer/>
