@@ -2,9 +2,7 @@ import axios from 'axios';
 
 export const fetchProducts = (category) => (dispatch) => {
   axios.get(
-      `http://localhost:3001/products?
-      ${category !== null || category !== undefined ?
-          `category=${category}` : `${0}`}`)
+      `http://localhost:3001/products?category=${category}`)
       .then((data) => data.data)
       .then((items) => dispatch(setProducts(items)));
 };
