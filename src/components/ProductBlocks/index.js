@@ -1,3 +1,4 @@
 import ProductBlock from './ProductBlock';
+import ProductLoadingBlock from './ProductLoadingBlock';
 
-export {ProductBlock};
+export {ProductBlock, ProductLoadingBlock};

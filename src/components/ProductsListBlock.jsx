@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {ProductBlock} from '../components';
+import {ProductBlock, ProductLoadingBlock} from '../components';
 
-function ProductsListBlock({items}) {
+function ProductsListBlock({items, isLoaded}) {
   return (
     <section className='product-list-block'>
       <h2 className='visually-hidden'>
@@ -11,7 +11,7 @@ function ProductsListBlock({items}) {
       </h2>
       <div className='product-list-block__list-wrapper'>
         <ul className='product-list-block__list'>
-          {
+          {isLoaded ?
             items.map((obj) => (
               <li key={obj.id} className='product-list-block__item'>
                 <ProductBlock
@@ -23,7 +23,16 @@ function ProductsListBlock({items}) {
                   ingridients={obj.ingridients}
                   weight={obj.weight} />
               </li>
-            ))
+            )) :
+            Array(8)
+                .fill(0)
+                .map((_, index) =>
+                  <li
+                    className='product-list-block__item'
+                    key={index} >
+                    <ProductLoadingBlock/>
+                  </li>,
+                )
           }
         </ul>
       </div>
@@ -35,4 +44,5 @@ export default ProductsListBlock;
 
 ProductsListBlock.propTypes = {
   items: PropTypes.array.isRequired,
+  isLoaded: PropTypes.bool.isRequired,
 };

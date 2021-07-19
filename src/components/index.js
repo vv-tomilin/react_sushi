@@ -8,7 +8,7 @@ import OtherInformation from './OtherInformation';
 import SocialNetworks from './SocialNetworks';
 import Categories from './Categories';
 import ProductsListBlock from './ProductsListBlock';
-import {ProductBlock} from './ProductBlocks';
+import {ProductBlock, ProductLoadingBlock} from './ProductBlocks';
 import Button from './Button';
 import Footer from './Footer';
 import CartButton from './CartButton';
@@ -21,6 +21,7 @@ export {
   Information,
   InformationDesktop,
   ProductBlock,
+  ProductLoadingBlock,
   OtherInformation,
   SocialNetworks,
   Categories,

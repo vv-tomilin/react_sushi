@@ -44,4 +44,12 @@
             width: 100%;
         }
     }
+
+    &__load-svg {
+        width: 100%;
+        height: auto;
+
+        position: relative;
+        top: 20px;
+    }
 }

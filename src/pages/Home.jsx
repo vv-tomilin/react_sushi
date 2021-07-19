@@ -30,6 +30,7 @@ const Home = () => {
 
   const items = useSelector(({products}) => products.items);
   const {category} = useSelector(({category}) => category);
+  const isLoaded = useSelector(({products}) => products.isLoaded);
 
   React.useEffect(() => {
     dispatch(fetchProducts(category));
@@ -69,7 +70,9 @@ const Home = () => {
             <Information/>
           </div>
         </div>
-        <ProductsListBlock items={items}/>
+        <ProductsListBlock
+          items={items}
+          isLoaded={isLoaded} />
       </main>
 
       <Footer/>
