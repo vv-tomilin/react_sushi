@@ -733,5 +733,20 @@
             "carbohydrates": 103,
             "energyValue": 596
         }
+    ],
+
+    "promo": [
+        {
+            "id": 0,
+            "promoURL": "../src/assets/promo-bunners/promo_1.jpg"
+        },
+        {
+            "id": 1,
+            "promoURL": "../src/assets/promo-bunners/promo_2.jpg"
+        },
+        {
+            "id": 2,
+            "promoURL": "../src/assets/promo-bunners/promo_3.jpg"
+        }
     ]
 }
