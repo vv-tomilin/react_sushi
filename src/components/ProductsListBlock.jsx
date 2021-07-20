@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import {ProductBlock, ProductLoadingBlock} from '../components';
 
-function ProductsListBlock({items, isLoaded}) {
+function ProductsListBlock({items, isLoaded, onClickAddProduct}) {
   return (
     <section className='product-list-block'>
       <h2 className='visually-hidden'>
@@ -21,7 +21,8 @@ function ProductsListBlock({items, isLoaded}) {
                   price={obj.price}
                   quantity={obj.quantity}
                   ingridients={obj.ingridients}
-                  weight={obj.weight} />
+                  weight={obj.weight}
+                  onClickAddToCart={onClickAddProduct} />
               </li>
             )) :
             Array(8)
@@ -45,4 +46,5 @@ export default ProductsListBlock;
 ProductsListBlock.propTypes = {
   items: PropTypes.array.isRequired,
   isLoaded: PropTypes.bool.isRequired,
+  onClickAddProduct: PropTypes.func.isRequired,
 };

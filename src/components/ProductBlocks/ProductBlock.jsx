@@ -5,7 +5,22 @@ import Button from '../Button';
 
 import {iSymbol, cartIconWhite} from '../../assets/logo and icons';
 
-function ProductBlock({name, imageURL, price, ingridients, weight}) {
+function ProductBlock({
+  id, name, imageURL, price, ingridients, weight, onClickAddToCart,
+}) {
+  const onAddProduct = () => {
+    const obj = {
+      id,
+      name,
+      imageURL,
+      price,
+      ingridients,
+      weight,
+    };
+
+    onClickAddToCart(obj);
+  };
+
   return (
     <div className='product-block__wrapper'>
       <div className='product-block'>
@@ -28,7 +43,9 @@ function ProductBlock({name, imageURL, price, ingridients, weight}) {
           <Button className='button_ingridients-info'>
             <img src={iSymbol} alt=''/>
           </Button>
-          <Button className='button_add'>
+          <Button
+            className='button_add'
+            onClick={onAddProduct} >
             <span> В корзину</span>
             <img src={cartIconWhite}/>
           </Button>
@@ -41,9 +58,11 @@ function ProductBlock({name, imageURL, price, ingridients, weight}) {
 export default ProductBlock;
 
 ProductBlock.propTypes = {
+  id: PropTypes.number,
   name: PropTypes.string.isRequired,
   imageURL: PropTypes.string,
   price: PropTypes.number,
   ingridients: PropTypes.string,
   weight: PropTypes.number,
+  onClickAddToCart: PropTypes.func,
 };

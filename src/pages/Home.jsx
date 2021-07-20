@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import {fetchProducts} from '../redux/actions/products';
 import {setCategory} from '../redux/actions/category';
+import {addproductToCart} from '../redux/actions/cart';
 
 import {
   Header,
@@ -40,6 +41,10 @@ const Home = () => {
     dispatch(setCategory(index));
   };
 
+  const handleAddProductToCart = (obj) => {
+    dispatch(addproductToCart(obj));
+  };
+
   return (
     <div>
       <Header/>
@@ -72,7 +77,8 @@ const Home = () => {
         </div>
         <ProductsListBlock
           items={items}
-          isLoaded={isLoaded} />
+          isLoaded={isLoaded}
+          onClickAddProduct={handleAddProductToCart} />
       </main>
 
       <Footer/>
