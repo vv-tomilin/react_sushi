@@ -6,18 +6,18 @@ import Button from '../Button';
 import {iSymbol, cartIconWhite} from '../../assets/logo and icons';
 
 function ProductBlock({name, imageURL, price, ingridients, weight}) {
-  console.log(imageURL);
-
   return (
     <div className='product-block__wrapper'>
       <div className='product-block'>
         <img
           className='product-block__img' src={imageURL}
           width='300' height='170' />
-        <h3>{name}</h3>
+        <a className='product-block__title' href='#'>{name}</a>
         <div className='product-block__short-description'>
           <p>
-            {ingridients}
+            {ingridients.length > 50 ?
+            `${ingridients.slice(0, 50)}. . .` :
+            `${ingridients}`}
           </p>
           <span>{weight} г.</span>
         </div>

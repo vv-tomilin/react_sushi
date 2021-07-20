@@ -41,6 +41,31 @@
         margin-top: 20px;
     }
 
+    &__title {
+        @media (max-width: $tablet-width) {
+            display: block;
+            width: 100%;
+            height: 31px;
+
+            margin-top: 11px;
+
+            font-family: 'Roboto';
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        @media (min-width: $desktop-width) {
+            display: block;
+            width: 100%;
+
+            margin-top: 11px;
+
+            font-family: 'Roboto';
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
     &__short-description {
 
         margin-top: 11px;
@@ -51,12 +76,12 @@
 
         font-family: 'Roboto';
         font-size: 14px;
-        font-weight: 100;
+        font-weight: 300;
         color: rgba(0, 0, 0, 0.45);
 
         @media (max-width: $tablet-width) {
             p {
-                width: 57%;
+                width: 68%;
             }
         }
 
@@ -64,12 +89,12 @@
             font-size: 18px;
 
             p {
-                width: 60%;
+                width: 62%;
             }
         }
 
         span {
-            margin-left: 65px;
+            margin-left: 50px;
         }
     }
 
