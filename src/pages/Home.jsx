@@ -3,6 +3,7 @@ import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {fetchProducts} from '../redux/actions/products';
+import {fetchPromo} from '../redux/actions/promo';
 import {setCategory} from '../redux/actions/category';
 import {addproductToCart} from '../redux/actions/cart';
 
@@ -36,6 +37,10 @@ const Home = () => {
   React.useEffect(() => {
     dispatch(fetchProducts(category));
   }, [category]);
+
+  React.useEffect(() => {
+    fetchPromo(dispatch);
+  }, []);
 
   const onSelectCategory = (index) => {
     dispatch(setCategory(index));
