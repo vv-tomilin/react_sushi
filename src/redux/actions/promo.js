@@ -10,3 +10,8 @@ export const setPromo = (promoItems) => ({
   type: 'SET_PROMO',
   payload: promoItems,
 });
+
+export const setActivePromo = (index) => ({
+  type: 'SET_ACTIVE_PROMO',
+  payload: index,
+});

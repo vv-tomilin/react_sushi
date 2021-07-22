@@ -1,5 +1,6 @@
 const initialState = {
   promoItems: [],
+  activePromoIndex: 0,
 };
 
 function promo(state = initialState, action) {
@@ -8,6 +9,11 @@ function promo(state = initialState, action) {
       return {
         ...state,
         promoItems: action.payload,
+      };
+    case 'SET_ACTIVE_PROMO':
+      return {
+        ...state,
+        activePromoIndex: action.payload,
       };
     default:
       return state;
