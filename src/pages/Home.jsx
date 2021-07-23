@@ -34,7 +34,7 @@ const Home = () => {
   const {category} = useSelector(({category}) => category);
   const isLoaded = useSelector(({products}) => products.isLoaded);
   const promoItems = useSelector(({promo}) => promo.promoItems);
-  // const activePromo = useSelector(({promo}) => promo.activePromoIndex);
+  const activePromoIndex = useSelector(({promo}) => promo.activePromoIndex);
 
   React.useEffect(() => {
     dispatch(fetchProducts(category));
@@ -42,7 +42,7 @@ const Home = () => {
 
   React.useEffect(() => {
     fetchPromo(dispatch);
-  }, []);
+  }, [activePromoIndex]);
 
   const onSelectCategory = (index) => {
     dispatch(setCategory(index));
@@ -83,6 +83,7 @@ const Home = () => {
             <DiscountsBanners
               promoItems={promoItems}
               onClickActivePromo={onSelectActivePromo}
+              activeIndex={activePromoIndex}
               className='home__banner-img'/>
           </div>
           <div className='home__information-wrapper'>

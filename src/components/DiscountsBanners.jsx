@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {promo3} from '../assets/promo-bunners/';
+function DiscountsBanners({promoItems, onClickActivePromo, activeIndex}) {
+  const promoImgArr = promoItems.map((obj) => obj.promoURL);
+  const promoImg = promoImgArr[activeIndex];
+  console.log(promoImg);
 
-function DiscountsBanners({promoItems, onClickActivePromo}) {
+  const onSelectActivePromo = (index) => {
+    onClickActivePromo(index);
+  };
   return (
     <section className='discounts-bunners'>
       <h2 className='visually-hidden'>Баннеры проходящих акций и скидок</h2>
@@ -12,12 +17,12 @@ function DiscountsBanners({promoItems, onClickActivePromo}) {
         <li className='discounts-bunners__bunner-item'>
           <img
             className='discounts-bunners__bunner-mob'
-            src={promo3} alt=''/>
+            src={promoImg} alt=''/>
         </li>
         <li className='discounts-bunners__bunner-item'>
           <img
             className='discounts-bunners__bunner-desktop'
-            src={promo3} alt=''/>
+            src={promoImg} alt=''/>
         </li>
       </ul>
 
@@ -29,25 +34,16 @@ function DiscountsBanners({promoItems, onClickActivePromo}) {
                 .map((_, index) =>
                   <li
                     key={index}
-                    className='discounts-bunners__toggle'
-                    onClick={() => onClickActivePromo(index)} >
+                    className={
+                      activeIndex === index ?
+                      `discounts-bunners__toggle 
+                      discounts-bunners__toggle_current` :
+                      'discounts-bunners__toggle'
+                    }
+                    onClick={() => onSelectActivePromo(index)} >
                   </li>,
                 )
           }
-          {/* <li className='discounts-bunners__toggle'>
-            <button className='visually-hidden'></button>
-          </li>
-          <li
-            className='discounts-bunners__toggle
-            discounts-bunners__toggle_current'>
-            <button className='visually-hidden'></button>
-          </li>
-          <li className='discounts-bunners__toggle'>
-            <button className='visually-hidden'></button>
-          </li>
-          <li className='discounts-bunners__toggle'>
-            <button className='visually-hidden'></button>
-          </li> */}
         </ul>
       </div>
     </section>
@@ -59,4 +55,5 @@ export default DiscountsBanners;
 DiscountsBanners.propTypes = {
   promoItems: PropTypes.array.isRequired,
   onClickActivePromo: PropTypes.func.isRequired,
+  activeIndex: PropTypes.number.isRequired,
 };
