@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 function DiscountsBanners({promoItems, onClickActivePromo, activeIndex}) {
   const promoImgArr = promoItems.map((obj) => obj.promoURL);
   const promoImg = promoImgArr[activeIndex];
-  console.log(promoImg);
 
   const onSelectActivePromo = (index) => {
     onClickActivePromo(index);
