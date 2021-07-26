@@ -2,19 +2,11 @@
 
 .cart-button {
 
-    // @media (min-width: $desktop-width) {
-    //     &_mobile {
-    //         display: none;
-    //     }
-    // }
-
-    // @media (max-width: $tablet-width) {
-    //     &_mobile {
-    //        display: run-in;
-    //     }
-    // }
-
     position: relative;
+
+    &__link {
+        cursor: pointer;
+    }
 
     &__count {
 

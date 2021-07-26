@@ -8,14 +8,12 @@ import {setCategory} from '../redux/actions/category';
 import {addproductToCart} from '../redux/actions/cart';
 
 import {
-  Header,
   Filters,
   SelectedCategory,
   DiscountsBanners,
   Information,
   ProductsListBlock,
   Categories,
-  Footer,
 } from '../components';
 
 const categoriesNames = [
@@ -58,8 +56,6 @@ const Home = () => {
 
   return (
     <div>
-      <Header/>
-
       <main>
         <h1 className='visually-hidden'>
           Интернет магазин японской кухни &laquo;SushiZen&raquo;
@@ -95,8 +91,6 @@ const Home = () => {
           isLoaded={isLoaded}
           onClickAddProduct={handleAddProductToCart} />
       </main>
-
-      <Footer/>
     </div>
   );
 };

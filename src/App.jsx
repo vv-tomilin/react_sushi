@@ -1,11 +1,18 @@
 import React from 'react';
+import {Route} from 'react-router';
 
-import Home from './pages/Home';
+import {Header, Footer} from './components';
+import {Home, Cart} from './pages';
 
 function App() {
   return (
-    <div>
-      <Home/>
+    <div className='app'>
+      <Header/>
+      <div>
+        <Route path='/' component={Home} exact />
+        <Route path='/cart' component={Cart} exact />
+      </div>
+      <Footer/>
     </div>
   );
 }

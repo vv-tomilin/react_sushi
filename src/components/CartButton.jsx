@@ -11,7 +11,7 @@ function CartButton({className}) {
   return (
     <div className={`${className}_mobile`}>
       <div className={className}>
-        <a href='#' >
+        <a className={`${className}__link`} href='#' >
           <span className={`${className}__price`}>{totalPrice}₽</span>
           <img src={cartIcon} alt='cart_icon' />
           <div className={`${className}__count-wrapper`}>

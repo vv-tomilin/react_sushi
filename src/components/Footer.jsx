@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import {OtherInformation, SocialNetworks, CartButton} from './';
 
@@ -8,7 +9,9 @@ function Footer() {
       <div className='footer__mobile-block'>
         <div className='footer_closed'></div>
         <div className='footer__cart-button-wrapper'>
-          <CartButton className='cart-button'/>
+          <Link to='/cart'>
+            <CartButton className='cart-button'/>
+          </Link>
         </div>
       </div>
       <OtherInformation className='footer'/>

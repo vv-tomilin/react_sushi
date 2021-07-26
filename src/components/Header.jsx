@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import {CartButton, InformationDesktop} from './';
 
@@ -13,10 +14,12 @@ function Header() {
       <div className="header__wrapper">
         <div className='header'>
           <div className='header__logo-wrapper'>
-            <img
-              className='header__logo'
-              src={logo} alt='logo'
-              width='91' height='59' />
+            <Link to='/'>
+              <img
+                className='header__logo'
+                src={logo} alt='logo'
+                width='91' height='59' />
+            </Link>
           </div>
 
           <div className='header__phone-wrapper'>
@@ -35,7 +38,9 @@ function Header() {
           <InformationDesktop/>
 
           <div className='header__cart-button-wrapper'>
-            <CartButton className='cart-button'/>
+            <Link to='/cart'>
+              <CartButton className='cart-button'/>
+            </Link>
           </div>
         </div>
       </div>
