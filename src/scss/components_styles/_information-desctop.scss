@@ -15,7 +15,9 @@
 
     &__item {
         margin-right: 24px;
+    }
 
+    &__link {
         &:hover {
             color: red;
         }
