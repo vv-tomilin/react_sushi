@@ -103,3 +103,5 @@ _ProductBlock_ (переименовал компонент _RollSushiBlock_ в 
 
 * __Commit 30__ - создал компоненты _PromosInfoPage, BonusesPage, DeliveryInfoPage, AboutWebSitePage_ и настроил их маршрутизацию в десктопной версии
 приложения;
+
+* __Commit 30.1__ - настороил маршрутизацию под мобильную и планшетную версии приложения для компонентов _PromosInfoPage, BonusesPage, DeliveryInfoPage, AboutWebSitePage_;
