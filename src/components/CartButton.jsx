@@ -11,14 +11,14 @@ function CartButton({className}) {
   return (
     <div className={`${className}_mobile`}>
       <div className={className}>
-        <a className={`${className}__link`} href='#' >
+        <div className={`${className}__link`}>
           <span className={`${className}__price`}>{totalPrice}₽</span>
           <img src={cartIcon} alt='cart_icon' />
           <div className={`${className}__count-wrapper`}>
             <span className={`${className}__count`}>{totalCount}</span>
           </div>
           <span className='visually-hidden'>Корзина</span>
-        </a>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+@import '../variables';
+
 * {
     padding: 0;
     margin: 0;
@@ -18,6 +20,8 @@
     -webkit-font-smoothing: antialiased;
     color: black;
     height: 100%;
+
+    background-color: $product-list-block_bg;
   }
   
   a,

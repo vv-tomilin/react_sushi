@@ -19,7 +19,7 @@ function App() {
   return (
     <div className='app'>
       <Header/>
-      <div>
+      <div className='app__route-pages'>
         <Route path='/' component={Home} exact />
         <Route path='/cart' component={Cart} exact />
         <Route path='/promos-info-page' component={PromosInfoPage} exact />

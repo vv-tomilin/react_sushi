@@ -8,12 +8,145 @@
     width: 100%;
 
     @media (max-width: $tablet-width) {
-        height: calc(100vh - 149px);
+        height: 100%;
     }
 
     @media (min-width: $desktop-width) {
         height: calc(100vh - 318px);
     }
 
-    background-color: $product-list-block_bg;
+    &__item {
+        @media (max-width: $tablet-width) {
+            margin: 0 auto;
+            margin-top: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            font-family: 'Roboto';
+            font-size: 10px;
+
+            width: 92%;
+
+            background-color: $main_color_bg_blocks;
+            border-radius: 8px;
+
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__image {
+        @media (max-width: $tablet-width) {
+            & img {
+                width: 80px;
+                height: 60px;
+
+                border-radius: 8px;
+
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__info-block {
+        @media (max-width: $tablet-width) {
+            margin-left: 15px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__image-info-wrapper {
+        @media (max-width: $tablet-width) {
+            display: flex;
+        }
+    }
+
+    &__buttons {
+
+        @media (max-width: $tablet-width) {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            
+            margin-right: 10px;
+        }
+
+        &_counter-buttons {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            height: 20px;
+        }
+
+        &_delete {
+            width: 25px;
+            height: 25px;
+            border: none;
+            background-color: transparent;
+
+            & svg path {
+                fill:$additional_color_bg_font;
+            }
+
+            &:active {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &__counter-button {
+        text-align: center;
+
+        width: 20px;
+        height: 20px;
+
+        font-size: 13px;
+        font-weight: 900;
+        color: $additional_color_bg_font;
+
+        border: 2px solid $additional_color_bg_font;
+        border-radius: 50px;
+
+        &:active {
+            background: $additional_color_bg_font;
+            
+            color: white;
+        }
+    }
+
+    &__product-count {
+        font-size: 18px;
+        font-weight: 600;
+        color: $additional_color_bg_font;
+
+        padding: 0 4px;
+    }
+
+    &__product-name {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__product-weight {
+        font-weight: 300;
+    }
+
+    &__total-price {
+        font-weight: 600;
+        font-size: 14px;
+
+        padding: 0 3px;
+
+        border-radius: 4px;
+
+        width: max-content;
+
+        background-color: rgba(252, 108, 27, 0.3);
+    }
 }

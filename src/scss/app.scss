@@ -6,5 +6,13 @@
 @import 'components_styles/main.scss';
 
 .app {
+    
     width: 100%;
+    object-fit: cover;
+
+    background-color: $product-list-block_bg;
+
+    &__route-pages {
+        background-color: $product-list-block_bg;
+    }
 }

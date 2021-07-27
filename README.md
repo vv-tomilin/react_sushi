@@ -108,3 +108,5 @@ _ProductBlock_ (переименовал компонент _RollSushiBlock_ в 
 
 * __Commit 31__ - создал компоненты _JobOpeningsPage, OurRestaurantsPage, PrivacyPolicyPage, PublicOfferPage_ и настроил их маршрутизацию в десктопной версии
 приложения;
+
+* __Commit 32__ - сделал предварительную верстку компонента _Cart_ (катрочку продуктов в корзине);
