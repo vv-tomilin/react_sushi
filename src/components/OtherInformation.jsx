@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 import {footerLogo} from '../assets/logo and icons';
 
@@ -18,13 +19,10 @@ function OtherInformation({className}) {
       <div className={`${className}__other-info-blocks`}>
         <ul className={`${className}__other-info-blocks-list`}>
           <li className={`${className}__other-info-blocks-item`}>
-            <a href='#'>Публичная оферта</a>
+            <Link to='public-offer-page'>Публичная оферта</Link>
           </li>
           <li className={`${className}__other-info-blocks-item`}>
-            <a href='#'>Политика конфиденциальности</a>
-          </li>
-          <li className={`${className}__other-info-blocks-item`}>
-            <a href='#'>Полные реквизиты</a>
+            <Link to='/privacy-policy-page'>Политика конфиденциальности</Link>
           </li>
         </ul>
       </div>
@@ -32,10 +30,10 @@ function OtherInformation({className}) {
       <div className={`${className}__other-info-blocks`}>
         <ul className={`${className}__other-info-blocks-list`}>
           <li className={`${className}__other-info-blocks-item`}>
-            <a href='#'>Наши рестораны</a>
+            <Link to='/our-restaurants-page'>Наши рестораны</Link>
           </li>
           <li className={`${className}__other-info-blocks-item`}>
-            <a href='#'>Карьера</a>
+            <Link to='/job-openings-page'>Наши вакансии</Link>
           </li>
         </ul>
       </div>
@@ -47,7 +45,7 @@ function OtherInformation({className}) {
 
       <div className={`${className}__other-info-blocks`}>
         <div className={`${className}__other-info-about-site`}>
-          <a href='#'>О сайте</a>
+          <Link to='about-web-site-page'>О сайте</Link>
         </div>
       </div>
     </section>

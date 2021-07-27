@@ -1,0 +1,19 @@
+@import '../variables.scss';
+
+.job-openings-page {
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    @media (max-width: $tablet-width) {
+        height: calc(100vh - 149px);
+    }
+
+    @media (min-width: $desktop-width) {
+        height: calc(100vh - 318px);
+    }
+
+    background-color: $product-list-block_bg;
+}

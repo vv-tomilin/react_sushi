@@ -105,3 +105,6 @@ _ProductBlock_ (переименовал компонент _RollSushiBlock_ в 
 приложения;
 
 * __Commit 30.1__ - настороил маршрутизацию под мобильную и планшетную версии приложения для компонентов _PromosInfoPage, BonusesPage, DeliveryInfoPage, AboutWebSitePage_;
+
+* __Commit 31__ - создал компоненты _JobOpeningsPage, OurRestaurantsPage, PrivacyPolicyPage, PublicOfferPage_ и настроил их маршрутизацию в десктопной версии
+приложения;
