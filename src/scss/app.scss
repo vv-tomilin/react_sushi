@@ -6,13 +6,27 @@
 @import 'components_styles/main.scss';
 
 .app {
-    
+    position: relative;
+
     width: 100%;
-    object-fit: cover;
+    height: 100%;
 
     background-color: $product-list-block_bg;
 
     &__route-pages {
         background-color: $product-list-block_bg;
+    }
+
+    @media (min-width: $tablet-width) {
+        &__empty-block {
+            background: transparent;
+            height: 90px;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        &__empty-block {
+            display: none;
+        }
     }
 }

@@ -5,7 +5,9 @@
     @media (max-width: $tablet-width) {
 
         position: fixed;
-        bottom: -1px;
+        bottom: 0;
+
+        overflow-y: auto;
 
         height: 70px;
         width: 100%;
@@ -55,6 +57,8 @@
     }
 
     @media (min-width: $desktop-width) {
+        width: 100%;
+
         background: #000;
 
         * {

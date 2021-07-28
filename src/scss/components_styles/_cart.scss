@@ -11,10 +11,6 @@
         height: 100%;
     }
 
-    @media (min-width: $desktop-width) {
-        height: calc(100vh - 318px);
-    }
-
     &__item {
         @media (max-width: $tablet-width) {
             margin: 0 auto;
@@ -112,6 +108,8 @@
 
         border: 2px solid $additional_color_bg_font;
         border-radius: 50px;
+
+        background-color: transparent;
 
         &:active {
             background: $additional_color_bg_font;

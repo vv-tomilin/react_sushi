@@ -33,6 +33,7 @@ function App() {
           component={OurRestaurantsPage} exact/>
         <Route path='/job-openings-page' component={JobOpeningsPage} exact />
       </div>
+      <div className='app__empty-block'></div>
       <Footer/>
     </div>
   );
