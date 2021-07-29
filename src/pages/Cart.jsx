@@ -99,7 +99,7 @@ function Cart() {
       (
         <div className='cart__empty-wrapper'>
           <div className='cart__empty'>
-            <p className='cart__empty-title'>Ваша корзина пуста</p>
+            <p className='cart__empty-title'>Ваша корзина пуста...</p>
             <img className='cart__empty-img' src={cartEmptyImage} alt="" />
             <p className='cart__empty-text'>
               Скорее всего вы еще не выбрали ни одного блюда
