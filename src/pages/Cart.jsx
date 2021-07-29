@@ -1,10 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import {useSelector} from 'react-redux';
 
+import cartEmptyImage from '../assets/images/cart_empty.png';
+
 function Cart() {
   const cartProductItems = useSelector(({cart}) => cart.items);
-  console.log(cartProductItems);
+  const {totalCount} = useSelector(({cart}) => cart);
+  console.log(totalCount);
 
   const productGroup = Object.keys(cartProductItems)
       .map((key) => {
@@ -13,7 +17,7 @@ function Cart() {
 
   return (
     <div className='cart' >
-      <ul className='cart__list'>
+      {totalCount !== 0 ? (<ul className='cart__list'>
         {
           productGroup && productGroup.map((productItemGroup) => {
             const totalPrice =
@@ -91,7 +95,25 @@ function Cart() {
             );
           })
         }
-      </ul>
+      </ul>) :
+      (
+        <div className='cart__empty-wrapper'>
+          <div className='cart__empty'>
+            <p className='cart__empty-title'>Ваша корзина пуста</p>
+            <img className='cart__empty-img' src={cartEmptyImage} alt="" />
+            <p className='cart__empty-text'>
+              Скорее всего вы еще не выбрали ни одного блюда
+              пожалуйста вернитесь на главную страницу и выберите
+              для себя блюдо из нашего меню.
+            </p>
+            <Link to='/'>
+              <button className='cart__empty-btn-back'>
+                Вернуться на главную
+              </button>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
