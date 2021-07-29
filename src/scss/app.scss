@@ -13,11 +13,25 @@
 
     background-color: $product-list-block_bg;
 
-    &__route-pages {
-        background-color: $product-list-block_bg;
+    @media (min-width: $desktop-width) {
+        
     }
 
-    @media (min-width: $tablet-width) {
+    &__content-footer-wrapper {
+        @media (min-width: $desktop-width){
+            min-height: 100%;
+        }
+    }
+
+    &__route-pages {
+        background-color: $product-list-block_bg;
+
+        @media (min-width: $desktop-width) {
+            min-height: 61vh;
+        }
+    }
+
+    @media (max-width: $tablet-width) {
         &__empty-block {
             background: transparent;
             height: 90px;

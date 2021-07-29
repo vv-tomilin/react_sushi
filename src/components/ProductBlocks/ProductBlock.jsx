@@ -46,7 +46,7 @@ function ProductBlock({
           <Button
             className='button_add'
             onClick={onAddProduct} >
-            <span> В корзину</span>
+            <span>Хочу</span>
             <img src={cartIconWhite}/>
           </Button>
         </div>

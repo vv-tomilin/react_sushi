@@ -10,13 +10,12 @@ function Cart() {
       .map((key) => {
         return cartProductItems[key];
       });
-  console.log(productGroup);
 
   return (
     <div className='cart' >
       <ul className='cart__list'>
         {
-          productGroup && productGroup.map((productItemGroup, index) => {
+          productGroup && productGroup.map((productItemGroup) => {
             const totalPrice =
             productItemGroup[0].price * productItemGroup.length;
             const img = productItemGroup[0].imageURL;
@@ -29,7 +28,7 @@ function Cart() {
                   <div className='cart__image'>
                     <img
                       src={img}
-                      width='80' height='60' />
+                      width='150' height='90' />
                   </div>
                   <div className='cart__info-block'>
                     <p className='cart__product-name'>
@@ -75,8 +74,8 @@ function Cart() {
                       </g>
                       <g>
                         <path
-                          d="M19.9,35.1c-0.6,0-1-0.4-1-1V17.4c0-0.6,0.4-1,1-1s1,
-                          0.4,1,1v16.7C20.9,34.6,20.4,35.1,19.9,35.1z"/>
+                          d="M19.9,35.1c-0.6,0-1-0.4-1-1V17.4c0-0.6,0.4-1,
+                            1-1s1,0.4,1,1v16.7C20.9,34.6,20.4,35.1,19.9,35.1z"/>
                       </g>
                     </svg>
                   </button>
