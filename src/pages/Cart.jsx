@@ -7,7 +7,7 @@ import cartEmptyImage from '../assets/images/cart_empty.png';
 
 function Cart() {
   const cartProductItems = useSelector(({cart}) => cart.items);
-  const {totalCount} = useSelector(({cart}) => cart);
+  const {totalCount, totalPrice} = useSelector(({cart}) => cart);
 
   const productGroup = Object.keys(cartProductItems)
       .map((key) => {
@@ -102,6 +102,9 @@ function Cart() {
           }
         </ul>
         <div className='cart__order-btns-wrapper'>
+          <p className='cart__total-price-title'>
+            Итого: <span>{totalPrice} ₽</span>
+          </p>
           <button className='cart__place-order-btn'>
             Оформить заказ
           </button>
