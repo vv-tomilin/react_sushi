@@ -1,18 +1,27 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import {clearCart} from '../redux/actions/cart';
 
 import cartEmptyImage from '../assets/images/cart_empty.png';
 
 function Cart() {
+  const dispatch = useDispatch();
+
   const cartProductItems = useSelector(({cart}) => cart.items);
   const {totalCount, totalPrice} = useSelector(({cart}) => cart);
 
-  const productGroup = Object.keys(cartProductItems)
+  const addedProducts = Object.keys(cartProductItems)
       .map((key) => {
         return cartProductItems[key];
       });
+
+  const onClearCart = () => {
+    if (window.confirm('Вы действительно хотите очистить корзину?')) {
+      dispatch(clearCart());
+    }
+  };
 
   return (
     <div className='cart' >
@@ -20,11 +29,15 @@ function Cart() {
       <div className='cart__list-wrapper'>
         <div className='cart__title-wrapper'>
           <p className='cart__title'>Корзина</p>
-          <button className='cart__clear-button'>Очистить корзину</button>
+          <button
+            className='cart__clear-button'
+            onClick={onClearCart} >
+            Очистить корзину
+          </button>
         </div>
         <ul className='cart__list'>
           {
-            productGroup && productGroup.map((productItemGroup) => {
+            addedProducts && addedProducts.map((productItemGroup) => {
               const totalPrice =
             productItemGroup[0].price * productItemGroup.length;
               const img = productItemGroup[0].imageURL;
