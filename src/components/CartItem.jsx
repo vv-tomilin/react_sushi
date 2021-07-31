@@ -15,6 +15,14 @@ function CartItem({
     onRemove(id);
   };
 
+  const handlePlusItem = () => {
+    onPlus(id);
+  };
+
+  const handleMinusItem = () => {
+    onMinus(id);
+  };
+
   return (
     <li
       className='cart__item'>
@@ -78,11 +86,15 @@ function CartItem({
           </svg>
         </button>
         <div className='cart__buttons_counter-buttons'>
-          <button className='cart__counter-button'>-</button>
+          <button
+            className='cart__counter-button'
+            onClick={handleMinusItem} >-</button>
           <span className='cart__product-count'>
             {totalCount}
           </span>
-          <button className='cart__counter-button'>+</button>
+          <button
+            className='cart__counter-button'
+            onClick={handlePlusItem} >+</button>
         </div>
       </div>
     </li>
