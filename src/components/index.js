@@ -12,6 +12,7 @@ import {ProductBlock, ProductLoadingBlock} from './ProductBlocks';
 import Button from './Button';
 import Footer from './Footer';
 import CartButton from './CartButton';
+import CartItem from './CartItem';
 
 export {
   Header,
@@ -29,4 +30,5 @@ export {
   Button,
   Footer,
   CartButton,
+  CartItem,
 };
