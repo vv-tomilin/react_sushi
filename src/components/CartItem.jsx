@@ -10,7 +10,8 @@ function CartItem({
   totalCount,
   onRemove,
   onMinus,
-  onPlus}) {
+  onPlus,
+  disabled}) {
   const handleRemoveClick = () => {
     onRemove(id);
   };
@@ -45,7 +46,8 @@ function CartItem({
       <div className='cart__buttons'>
         <button
           className='cart__buttons_delete'
-          onClick={handleRemoveClick} >
+          onClick={handleRemoveClick}
+          disabled={disabled} >
           <svg enableBackground="new 0 0 40 40"
             id="Слой_1" version="1.1"
             viewBox="0 0 40 40" xmlSpace="preserve"
@@ -88,13 +90,15 @@ function CartItem({
         <div className='cart__buttons_counter-buttons'>
           <button
             className='cart__counter-button'
-            onClick={handleMinusItem} >-</button>
+            onClick={handleMinusItem}
+            disabled={disabled} >-</button>
           <span className='cart__product-count'>
             {totalCount}
           </span>
           <button
             className='cart__counter-button'
-            onClick={handlePlusItem} >+</button>
+            onClick={handlePlusItem}
+            disabled={disabled} >+</button>
         </div>
       </div>
     </li>
@@ -113,4 +117,5 @@ CartItem.propTypes = {
   onRemove: PropTypes.func,
   onMinus: PropTypes.func,
   onPlus: PropTypes.func,
+  disabled: PropTypes.bool,
 };

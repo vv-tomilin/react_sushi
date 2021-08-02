@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 import CartItem from '../components/CartItem';
+import {PlaceOrderModal} from '../components/Modals';
 
 import {useSelector, useDispatch} from 'react-redux';
 import {
@@ -17,6 +18,20 @@ function Cart() {
   const dispatch = useDispatch();
   const {totalCount, totalPrice, items} = useSelector(({cart}) => cart);
 
+  const [visibleModal, setVisibleModal] = React.useState(false);
+  const [redirectHome, setRedirectHome] = React.useState(false);
+  const placeOrderModalRef = React.useRef();
+
+  const hideModal = () => {
+    setVisibleModal(false);
+    onClearCartModal();
+    setRedirectHome(true);
+  };
+
+  const showModal = () => {
+    setVisibleModal(true);
+  };
+
   const addedProducts = Object.keys(items)
       .map((key) => {
         return items[key].items[0];
@@ -26,6 +41,10 @@ function Cart() {
     if (window.confirm('Вы действительно хотите очистить корзину?')) {
       dispatch(clearCart());
     }
+  };
+
+  const onClearCartModal = () => {
+    dispatch(clearCart());
   };
 
   const onRemoveItem = (id) => {
@@ -40,6 +59,10 @@ function Cart() {
     dispatch(minusCartItem(id));
   };
 
+  if (redirectHome) {
+    return <Redirect to='/'/>;
+  };
+
   return (
     <div className='cart' >
       {totalCount !== 0 ? (
@@ -48,7 +71,8 @@ function Cart() {
           <p className='cart__title'>Корзина</p>
           <button
             className='cart__clear-button'
-            onClick={onClearCart} >
+            onClick={onClearCart}
+            disabled={visibleModal} >
             Очистить корзину
           </button>
         </div>
@@ -65,20 +89,32 @@ function Cart() {
                 totalCount={items[obj.id].items.length}
                 onRemove={onRemoveItem}
                 onMinus={onMinusCartItem}
-                onPlus={onPlusItem} />
+                onPlus={onPlusItem}
+                disabled={visibleModal} />
             ))
           }
+          <div className='cart__place-order'>
+            {visibleModal &&
+              <PlaceOrderModal
+                onClick={hideModal}
+                currentRef={placeOrderModalRef} />}
+          </div>
         </ul>
 
         <div className='cart__order-btns-wrapper'>
           <p className='cart__total-price-title'>
             Итого: <span>{totalPrice} ₽</span>
           </p>
-          <button className='cart__place-order-btn'>
+          <button
+            className='cart__place-order-btn'
+            onClick={showModal}
+            disabled={visibleModal} >
             Оформить заказ
           </button>
-          <Link to='/'>
-            <button className='cart__empty-btn-back'>
+          <Link to={visibleModal ? undefined : '/'}>
+            <button
+              className='cart__empty-btn-back'
+              disabled={visibleModal} >
                 Продолжить покупки
             </button>
           </Link>
