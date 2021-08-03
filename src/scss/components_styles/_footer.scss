@@ -30,7 +30,7 @@
             content: "";
             position: relative;
             
-            width: 45px;
+            width: 35px;
             height: 3px;
             background-color: $additional_color_bg_font;
             box-shadow: 0 -11px 0 0 $additional_color_bg_font,
@@ -43,9 +43,10 @@
 
         &_open {
             position: relative;;
-            
+            bottom: 2px;
+
             width: 45px;
-            height: 45px;
+            height: 38px;
             
             &::before, &::after {
                 position: absolute;
