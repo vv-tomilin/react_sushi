@@ -35,6 +35,38 @@
             background-color: $additional_color_bg_font;
             box-shadow: 0 -11px 0 0 $additional_color_bg_font,
                         0 11px 0 0 $additional_color_bg_font;
+
+            &:active {
+                opacity: 0.3;
+            }
+        }
+
+        &_open {
+            position: relative;;
+            
+            width: 45px;
+            height: 45px;
+            
+            &::before, &::after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 44px;
+                width: 3px;
+                background-color: $additional_color_bg_font;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+
+            &:active {
+                opacity: 0.3;
+            }
         }
 
         &__other-info {

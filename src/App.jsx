@@ -2,6 +2,7 @@ import React from 'react';
 import {Route} from 'react-router';
 
 import {Header, Footer} from './components';
+import {MobileFooterModal} from './components/Modals';
 import {
   Home,
   Cart,
@@ -16,6 +17,25 @@ import {
 } from './pages';
 
 function App() {
+  const [footerMobileModal, setfooterMobileModal] = React.useState(false);
+  const mobFooterModalRef = React.useRef();
+  const mobFooterToggleRef = React.useRef();
+
+  const toggleFooterModal = () => {
+    setfooterMobileModal(!footerMobileModal);
+  };
+
+  const handleOutsideClick = (e) => {
+    if (!e.path.includes(mobFooterModalRef.current) &&
+        !e.path.includes(mobFooterToggleRef.current)) {
+      setfooterMobileModal(false);
+    }
+  };
+
+  React.useEffect(() => {
+    document.body.addEventListener('click', handleOutsideClick);
+  }, []);
+
   return (
     <div className='app'>
       <Header/>
@@ -42,7 +62,14 @@ function App() {
         <Route path='/job-openings-page' component={JobOpeningsPage} exact />
         <div className='app__empty-block'></div>
       </div>
-      <Footer/>
+      {footerMobileModal &&
+        <MobileFooterModal
+          toggleFooterModal={toggleFooterModal}
+          refModal={mobFooterModalRef} />}
+      <Footer
+        toggleFooterModal={toggleFooterModal}
+        refToggle={mobFooterToggleRef}
+        modalFlag={footerMobileModal} />
     </div>
   );
 }
