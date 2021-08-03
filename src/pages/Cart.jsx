@@ -111,7 +111,7 @@ function Cart() {
             disabled={visibleModal} >
             Оформить заказ
           </button>
-          <Link to={visibleModal ? undefined : '/'}>
+          <Link to={visibleModal ? '' : '/'}>
             <button
               className='cart__empty-btn-back'
               disabled={visibleModal} >

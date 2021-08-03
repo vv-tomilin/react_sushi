@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.product-ingridients-popup {
+    position: absolute;
+
+    bottom:50px;
+    left: 0;
+
+    width: 100%;
+    min-height: max-content;
+
+    background: $additional_color_bg_font;
+    border-radius: 10px;
+
+    &__info-wrapper {
+        position: relative;
+        padding: 25px 0;
+        width: 85%;
+
+        margin-left: 15px;
+    }
+
+        &__ingridients {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+
+        &__weight {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+
+            margin-top: 15px;
+        }
+}
