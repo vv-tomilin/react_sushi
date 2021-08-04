@@ -1,0 +1,24 @@
+.promo-item {
+
+    width: 95%;
+    margin: auto;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+    }
+
+    &__img {
+        border-radius: 10px;
+
+        @media (min-width: $tablet-width) {
+            margin-right: 15px;
+            
+            width: 50%;
+            height: max-content;
+        }
+    }
+
+    &__description-item {
+        padding: 4px 0;
+    }
+}

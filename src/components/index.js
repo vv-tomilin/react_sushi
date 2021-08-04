@@ -13,6 +13,7 @@ import Button from './Button';
 import Footer from './Footer';
 import CartButton from './CartButton';
 import CartItem from './CartItem';
+import PromoItem from './PromoItem';
 
 export {
   Header,
@@ -31,4 +32,5 @@ export {
   Footer,
   CartButton,
   CartItem,
+  PromoItem,
 };
