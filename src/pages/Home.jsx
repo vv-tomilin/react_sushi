@@ -5,6 +5,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {fetchProducts} from '../redux/actions/products';
 import {fetchPromo, setActivePromo} from '../redux/actions/promo';
 import {setCategory} from '../redux/actions/category';
+import {setSortBY} from '../redux/actions/filters';
 import {addproductToCart} from '../redux/actions/cart';
 
 import {
@@ -26,10 +27,9 @@ const categoriesNames = [
 ];
 
 const filterItems = [
-  {name: 'По умолчанию', type: '', order: ''},
-  {name: 'По дешевле', type: 'price', order: 'asc'},
-  {name: 'По дороже', type: 'price', order: 'desc'},
-  {name: 'По алфавиту', type: 'name', order: 'asc'},
+  {name: 'по умолчанию', type: '', order: ''},
+  {name: 'по цене', type: 'price', order: 'asc'},
+  {name: 'по алфавиту', type: 'name', order: 'asc'},
 ];
 
 const Home = () => {
@@ -52,6 +52,10 @@ const Home = () => {
 
   const onSelectCategory = (index) => {
     dispatch(setCategory(index));
+  };
+
+  const onSelectSortType = (type) => {
+    dispatch(setSortBY(type));
   };
 
   const onSelectActivePromo = (index) => {
@@ -77,7 +81,9 @@ const Home = () => {
         <div className='home__filters-select-category-wrapper'>
           <div className='home__filters-wrapper'>
             <Filters
-              items={filterItems} />
+              activeSortType={sortBy.type}
+              items={filterItems}
+              onClickSortType={onSelectSortType} />
           </div>
           <div className='home__selected-category-wrapper'>
             <SelectedCategory/>
