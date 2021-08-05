@@ -30,7 +30,9 @@
 
     &__list-item {
 
-        @media (max-width: $tablet-width) {
+        cursor: pointer;
+
+        @media (max-width: $tablet-intermediate-width) {
             margin-left: 20px;
 
             font-size: 14px;
@@ -44,8 +46,6 @@
             font-size: 24px;
             line-height: 24px;
             font-weight: 900;
-
-            cursor: pointer;
         }
         
         &:last-child {

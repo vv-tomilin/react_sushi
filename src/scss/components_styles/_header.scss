@@ -12,7 +12,7 @@
 
     background-color: $main_color_bg_blocks;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-intermediate-width) {
         padding-top: 7px;
         padding-bottom: 8px;
     }
@@ -31,7 +31,7 @@
         margin: 0;
         padding: 0;
     
-        @media (max-width: $tablet-width) {
+        @media (max-width: $tablet-intermediate-width) {
             margin-left: 15px;
         }
 
@@ -88,7 +88,7 @@
 
     &__cart-button-wrapper {
 
-        @media (max-width: $tablet-width) {
+        @media (max-width: $tablet-intermediate-width) {
             display: none;
         }
 

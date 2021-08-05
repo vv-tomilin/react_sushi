@@ -4,9 +4,10 @@
     position: absolute;
 
     bottom:50px;
-    left: 0;
+    left: 50%;
+    margin-left: -45%;
 
-    width: 100%;
+    width: 90%;
     min-height: max-content;
 
     background: $additional_color_bg_font;

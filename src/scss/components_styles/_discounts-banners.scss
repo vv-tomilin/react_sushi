@@ -9,7 +9,7 @@
         width: 100vw;
         height: auto;
 
-        @media (min-width: $tablet-width) {
+        @media (min-width: $tablet-intermediate-width) {
             height: 22vh;
         }
 
@@ -23,7 +23,7 @@
         width: 100vw;
         height: auto;
 
-        @media (max-width: $tablet-width) {
+        @media (max-width: $tablet-intermediate-width) {
             display: none;
         }
 

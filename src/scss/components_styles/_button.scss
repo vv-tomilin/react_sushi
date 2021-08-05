@@ -12,6 +12,10 @@
     border: none;
     border-radius: 50px;
 
+    &:active {
+        opacity: 0.3;
+    }
+
     &_add {
 
         display: flex;

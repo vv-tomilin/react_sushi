@@ -8,7 +8,7 @@
     padding-bottom: 20px;
 
     &__list {
-        @media (max-width: $tablet-width) {
+        @media (max-width: $tablet-intermediate-width) {
             display: flex;
             flex-wrap: wrap;
         }
@@ -32,7 +32,7 @@
     }
 
     &__item {
-        @media (max-width: $tablet-width) {
+        @media (max-width: $tablet-intermediate-width) {
             width: 50%;
         }
 

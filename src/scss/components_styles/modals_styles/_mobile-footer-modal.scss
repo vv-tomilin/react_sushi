@@ -2,7 +2,7 @@
 
 .mobile-footer-modal {
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-intermediate-width) {
         position: fixed;
         bottom: 70px;
         z-index: 10;
