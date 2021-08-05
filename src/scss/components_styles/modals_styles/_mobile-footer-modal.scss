@@ -1,6 +1,7 @@
 @import '../../variables';
 
 .mobile-footer-modal {
+    overflow-y: auto;
 
     @media (max-width: $tablet-intermediate-width) {
         position: fixed;
@@ -13,14 +14,14 @@
         min-width: 100%;
         min-height: calc(100% - 70px);
 
-        overflow: hidden;
+        overflow-y: auto;
 
         background-color: #fcf7d6;
 
         &__other-info {
             order: 0;
-            position: fixed;
-            bottom: 150px;
+            position: absolute;
+            bottom: 75px;
 
             display: flex;
             flex-direction: column;
