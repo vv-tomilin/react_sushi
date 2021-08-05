@@ -11,8 +11,8 @@ function Footer({toggleFooterModal, refToggle, modalFlag}) {
         <div className='footer__mobile-block'>
           <div
             className={modalFlag ? 'footer_open' : 'footer_closed'}
-            onClick={toggleFooterModal}
-            ref={refToggle} ></div>
+            ref={refToggle}
+            onClick={toggleFooterModal} ></div>
           <div className='footer__cart-button-wrapper'>
             <Link to='/cart'>
               <CartButton className='cart-button'/>
