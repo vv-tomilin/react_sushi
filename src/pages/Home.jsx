@@ -25,6 +25,13 @@ const categoriesNames = [
   'Фирменное меню',
 ];
 
+const filterItems = [
+  {name: 'По умолчанию', type: '', order: ''},
+  {name: 'По дешевле', type: 'price', order: 'asc'},
+  {name: 'По дороже', type: 'price', order: 'desc'},
+  {name: 'По алфавиту', type: 'name', order: 'asc'},
+];
+
 const Home = () => {
   const dispatch = useDispatch();
 
@@ -33,10 +40,11 @@ const Home = () => {
   const isLoaded = useSelector(({products}) => products.isLoaded);
   const promoItems = useSelector(({promo}) => promo.promoItems);
   const activePromoIndex = useSelector(({promo}) => promo.activePromoIndex);
+  const {sortBy} = useSelector(({filters}) => filters);
 
   React.useEffect(() => {
-    dispatch(fetchProducts(category));
-  }, [category]);
+    dispatch(fetchProducts(sortBy, category));
+  }, [category, sortBy]);
 
   React.useEffect(() => {
     fetchPromo(dispatch);
@@ -68,7 +76,8 @@ const Home = () => {
 
         <div className='home__filters-select-category-wrapper'>
           <div className='home__filters-wrapper'>
-            <Filters/>
+            <Filters
+              items={filterItems} />
           </div>
           <div className='home__selected-category-wrapper'>
             <SelectedCategory/>
