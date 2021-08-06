@@ -3,7 +3,7 @@ import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {fetchProducts} from '../redux/actions/products';
-import {fetchPromo, setActivePromo} from '../redux/actions/promo';
+import {fetchPromo} from '../redux/actions/promo';
 import {setCategory} from '../redux/actions/category';
 import {setSortBY} from '../redux/actions/filters';
 import {addproductToCart} from '../redux/actions/cart';
@@ -58,10 +58,6 @@ const Home = () => {
     dispatch(setSortBY(type));
   };
 
-  const onSelectActivePromo = (index) => {
-    dispatch(setActivePromo(index));
-  };
-
   const handleAddProductToCart = (obj) => {
     dispatch(addproductToCart(obj));
   };
@@ -93,8 +89,6 @@ const Home = () => {
           <div className='home__banners-wrapper'>
             <DiscountsBanners
               promoItems={promoItems}
-              onClickActivePromo={onSelectActivePromo}
-              activeIndex={activePromoIndex}
               className='home__banner-img'/>
           </div>
           <div className='home__information-wrapper'>
