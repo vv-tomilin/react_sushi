@@ -22,7 +22,9 @@
 
         &__banners-information-wrapper {
             display: flex;
-            justify-content: space-between
+            justify-content: space-between;
+            align-items: center;
+            background: $main_color_bg_blocks;
         }
 
         &__banners-wrapper {
@@ -32,6 +34,7 @@
 
         &__information-wrapper {
             width: 50%;
+            height: auto;
         }
     }
 
@@ -41,7 +44,7 @@
             display: flex;
             justify-content: space-between;
 
-            background-color: $main_color_bg_blocks;
+            background-color: $product-list-block_bg;
         }
 
         &__filters-wrapper {
@@ -53,10 +56,6 @@
         &__selected-category-wrapper {
 
             width: max-content;
-        }
-
-        &__information-wrapper {
-            display: none;
         }
     }
 }

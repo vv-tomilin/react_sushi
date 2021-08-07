@@ -19,9 +19,9 @@ function DiscountsBanners({promoItems}) {
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
-          autoHeight={true}
+          autoHeight={false}
           autoplay={{
-            'delay': 2500,
+            'delay': 4500,
             'disableOnInteraction': false,
           }}
           pagination={{
