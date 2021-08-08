@@ -1,8 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function PublicOfferPage() {
   return (
     <div className='public-offer-page'>
+      <div className='public-offer-page__btn-back-wrapper'>
+        <Link to='/'>
+          <button className='cart__empty-btn-back'>
+                Вернуться на главную
+          </button>
+        </Link>
+      </div>
       <div className='public-offer-page__low-text'>
         <h1 className='public-offer-page__title'>ПУБЛИЧНАЯ ОФЕРТА</h1>
         <p>
@@ -457,6 +465,13 @@ function PublicOfferPage() {
         <p><strong>БИК</strong>&nbsp;568978879</p>
 
         <p><strong>Корреспондентский счет</strong>&nbsp;30101810800000000789</p>
+      </div>
+      <div className='public-offer-page__btn-back-wrapper'>
+        <Link to='/'>
+          <button className='cart__empty-btn-back'>
+                Вернуться на главную
+          </button>
+        </Link>
       </div>
     </div>
   );

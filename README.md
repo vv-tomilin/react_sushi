@@ -156,5 +156,7 @@ _ProductBlock_ (переименовал компонент _RollSushiBlock_ в 
 
 * __Commit 40.1__ - наполнил компонент _PrivacyPolicyPage_ контентом и прописал для него стили;
 
+* __Commit 40.1.1__ - добавил кнопки "Вернуться назад" для компонентов _PublickOfferPage, PrivacyPolicyPage_;
+
 * __Commit 40.2__ - наполнил компонент _OurRestaurantsPage_ контентом и прописал для него стили;
 

@@ -1,8 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function PrivacyPolicyPage() {
   return (
     <div className='privacy-policy-page'>
+      <div className='privacy-policy-page__btn-back-wrapper'>
+        <Link to='/'>
+          <button className='cart__empty-btn-back'>
+                Вернуться на главную
+          </button>
+        </Link>
+      </div>
       <div className='privacy-policy-page__text'>
         <h1 className='privacy-policy-page__title'>
           ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
@@ -380,6 +388,13 @@ function PrivacyPolicyPage() {
           7.3. Все предложения или вопросы по настоящей Политике
           конфиденциальности следует сообщать office@example.ru.
         </p>
+      </div>
+      <div className='privacy-policy-page__btn-back-wrapper'>
+        <Link to='/'>
+          <button className='cart__empty-btn-back'>
+                Вернуться на главную
+          </button>
+        </Link>
       </div>
     </div>
   );
