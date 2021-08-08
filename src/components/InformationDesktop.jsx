@@ -11,8 +11,8 @@ function InformationDesktop() {
           </Link>
         </li>
         <li className='information-desktop__item'>
-          <Link to='/bonuses-page'>
-            <span className='information-desktop__link'>Бонусы</span>
+          <Link to='/how-pay-page'>
+            <span className='information-desktop__link'>Способы оплаты</span>
           </Link>
         </li>
         <li className='information-desktop__item'>

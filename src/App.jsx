@@ -7,7 +7,7 @@ import {
   Home,
   Cart,
   PromosInfoPage,
-  BonusesPage,
+  HowPayPage,
   DeliveryInfoPage,
   AboutWebSitePage,
   PublicOfferPage,
@@ -43,7 +43,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/cart' component={Cart} exact />
         <Route path='/promos-info-page' component={PromosInfoPage} exact />
-        <Route path='/bonuses-page' component={BonusesPage} exact />
+        <Route path='/how-pay-page' component={HowPayPage} exact />
         <Route
           path='/delivery-info-page'
           component={DeliveryInfoPage} exact />

@@ -32,10 +32,10 @@ function Information() {
         <li>
           <Link
             className='information__item'
-            to='/bonuses-page'>
+            to='/how-pay-page'>
             <img className='information__icon' src={bonusIcon} alt=''/>
             <div className='information__item-text-wrapper'>
-              <span className='information__item-text'>Бонусы</span>
+              <span className='information__item-text'>Способы оплаты</span>
             </div>
             <img className='information__arrow-icon' src={arrowIco} alt=''/>
           </Link>

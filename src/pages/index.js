@@ -1,7 +1,7 @@
 import Home from './Home';
 import Cart from './Cart';
 import PromosInfoPage from './PromosInfoPage';
-import BonusesPage from './BonusesPage';
+import HowPayPage from './HowPayPage';
 import DeliveryInfoPage from './DeliveryInfoPage';
 import AboutWebSitePage from './AboutWebSitePage';
 import PublicOfferPage from './PublicOfferPage';
@@ -13,7 +13,7 @@ export {
   Home,
   Cart,
   PromosInfoPage,
-  BonusesPage,
+  HowPayPage,
   DeliveryInfoPage,
   AboutWebSitePage,
   PublicOfferPage,
