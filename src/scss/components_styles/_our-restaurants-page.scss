@@ -3,17 +3,82 @@
 .our-restaurants-page {
 
     margin: 0;
+    margin-top: 20px;
     padding: 0;
 
-    width: 100%;
+    width: 90%;
 
     @media (max-width: $tablet-width) {
-        height: calc(100vh - 149px);
+        height: max-content;
     }
 
     @media (min-width: $desktop-width) {
-        height: calc(100vh - 318px);
+        height: max-content;
     }
 
     background-color: $product-list-block_bg;
+
+    &__title {
+        margin-bottom: 25px;
+        margin-left: 45px;
+
+        font-size: 25px;
+        font-family: 'Pusia';
+        font-weight: 700;
+
+        @media (min-width: $desktop-width) {
+            font-size: 36px;
+        }
+    }
+
+    &__city {
+        
+        &-name {
+
+            margin-bottom: 18px;
+
+            font-size: 30px;
+            font-family: 'Pusia';
+
+            color: red;
+            text-decoration: underline;
+        }
+
+        &-list {
+            margin-left: 45px;
+        }
+
+        &-item {
+            padding: 10px 0;
+        }
+    }
+
+    &__phone {
+        margin-top: 5px;
+
+        width: max-content;
+        
+        padding: 2px 10px;
+        background-color: rgba(0,0,0, 0.1);
+
+        border-radius: 10px;
+
+        &:hover a {
+            color: red;
+        }
+
+        &:active a {
+            color: red;
+            opacity: 0.3;
+        }
+    }
+
+    &__btn-back-wrapper {
+        width: 100vw;
+
+        margin-top: 25px;
+        margin-bottom: 30px;
+
+        text-align: center;
+    }
 }
