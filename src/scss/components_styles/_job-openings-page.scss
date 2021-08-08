@@ -2,18 +2,53 @@
 
 .job-openings-page {
 
-    margin: 0;
+    margin: 0 auto;
+    
     padding: 0;
 
-    width: 100%;
+    width: 90%;
 
     @media (max-width: $tablet-width) {
-        height: calc(100vh - 149px);
+        height: max-content;
+
+        margin-top: 20%;
     }
 
     @media (min-width: $desktop-width) {
-        height: calc(100vh - 318px);
+        height: max-content;
     }
 
     background-color: $product-list-block_bg;
+
+    &__content-wrapper {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+        font-size: 25px;
+        font-family: 'Pusia';
+        font-weight: 700;
+
+        @media (min-width: $desktop-width) {
+            font-size: 36px;
+        }
+    }
+
+    &__smile {
+        font-size: 80px;
+    }
+
+    &__text {
+        font-size: 25px;
+        font-weight: 300;
+
+        margin-top: 25px;
+    }
+
+    &__btn-back-wrapper {
+        margin: 0 auto;
+        margin-top: 15px;
+    }
 }
