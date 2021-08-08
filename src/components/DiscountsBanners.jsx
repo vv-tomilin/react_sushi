@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
-import SwiperCore, {Autoplay, Pagination, Navigation} from 'swiper/core';
+import SwiperCore, {Autoplay, Pagination, EffectFade} from 'swiper/core';
 
 import 'swiper/swiper.min.css';
-// import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/effect-fade/effect-fade.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+SwiperCore.use([Autoplay, Pagination, EffectFade]);
 
 function DiscountsBanners({promoItems}) {
   return (
@@ -19,9 +19,10 @@ function DiscountsBanners({promoItems}) {
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
+          effect={'fade'}
           autoHeight={false}
           autoplay={{
-            'delay': 4500,
+            'delay': 3000,
             'disableOnInteraction': false,
           }}
           pagination={{
@@ -31,7 +32,8 @@ function DiscountsBanners({promoItems}) {
           className="mySwiper" >
           {
             promoItems && promoItems.map((obj) => (
-              <SwiperSlide key={obj.id}>
+              <SwiperSlide
+                key={obj.id}>
                 <div className='discounts-bunners__bunner-item'>
                   <img
                     className='discounts-bunners__bunner-mob'
