@@ -145,11 +145,19 @@
                     &:first-child {
                         margin-top: 0;
                     }
+
+                    &:active {
+                        opacity: 0.3;
+                    }
                 }
             }
 
             &-about-site {
                 margin-right: 30px;
+
+                &:active {
+                    opacity: 0.3;
+                }
             }
         }
 
