@@ -53,5 +53,8 @@
     "eslint": "^7.30.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.24.0"
+  },
+  "engines": {
+    "node": "^14.15.5"
   }
 }
