@@ -22,7 +22,11 @@
     "redux-thunk": "^2.3.0",
     "swiper": "^6.8.1",
     "web-vitals": "^1.0.1",
-    "yarn": "^1.22.11"
+    "yarn": "^1.22.11",
+
+    "eslint": "^7.30.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.24.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,9 +55,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.30.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.24.0"
+    
   },
   "engines": {
     "node": "^14.15.x",
