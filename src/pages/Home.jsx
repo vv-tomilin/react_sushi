@@ -82,7 +82,8 @@ const Home = () => {
               onClickSortType={onSelectSortType} />
           </div>
           <div className='home__selected-category-wrapper'>
-            <SelectedCategory/>
+            <SelectedCategory
+              items={categoriesNames}/>
           </div>
         </div>
         <div className='home__banners-information-wrapper'>

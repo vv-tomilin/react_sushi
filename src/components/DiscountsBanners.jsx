@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SwiperCore, {Autoplay, Pagination, EffectFade} from 'swiper/core';
@@ -34,14 +35,16 @@ function DiscountsBanners({promoItems}) {
             promoItems && promoItems.map((obj) => (
               <SwiperSlide
                 key={obj.id}>
-                <div className='discounts-bunners__bunner-item'>
-                  <img
-                    className='discounts-bunners__bunner-mob'
-                    src={obj.promoURL} alt='' />
-                  <img
-                    className='discounts-bunners__bunner-desktop'
-                    src={obj.promoURL} alt='' />
-                </div>
+                <Link to='/promos-info-page'>
+                  <div className='discounts-bunners__bunner-item'>
+                    <img
+                      className='discounts-bunners__bunner-mob'
+                      src={obj.promoURL} alt='' />
+                    <img
+                      className='discounts-bunners__bunner-desktop'
+                      src={obj.promoURL} alt='' />
+                  </div>
+                </Link>
               </SwiperSlide>
             ))
           }

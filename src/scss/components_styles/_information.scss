@@ -13,6 +13,10 @@
         padding-top: 25px;
         padding-bottom: 25px;
 
+        &:active {
+            opacity: 0.2;
+        }
+
         &-text {
             font-family: 'Roboto';
             font-size: 24px;

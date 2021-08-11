@@ -154,6 +154,7 @@
                         opacity: 0.3;
                     }
                 }
+
             }
 
             &-about-site {
@@ -162,6 +163,12 @@
                 &:active {
                     opacity: 0.3;
                 }
+            }
+        }
+
+        &__tel-delivery {
+            &:active {
+                opacity: 0.3;
             }
         }
 

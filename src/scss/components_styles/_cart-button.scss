@@ -4,6 +4,10 @@
 
     position: relative;
 
+    &:active {
+        opacity: 0.3;
+    }
+
     &__link {
         cursor: pointer;
     }

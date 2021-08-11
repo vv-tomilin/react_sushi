@@ -367,22 +367,18 @@
     &__empty {
         text-align: center;
 
-        position: absolute;
+        position: relative;
         left: 50%;
 
-        @media (max-width: $tablet-width) {
+        height: max-content;
+
+        @media (max-width: $tablet-intermediate-width) {
+
             width: 75%;
             margin-left: -37.5%;
         }
 
-        @media (max-width: $tablet-intermediate-width) {
-            width: 40%;
-            margin-left: -20%;
-        }
-
         @media (min-width: $desktop-width) {
-            top: -210px;
-
             width: 50%;
             margin-left: -25%;
         }
@@ -390,9 +386,6 @@
         &-wrapper {
             position: relative;
             margin-top: 10px;
-            @media (max-width: $tablet-intermediate-width) {
-                
-            }
         }
 
         &-title {

@@ -5,7 +5,7 @@ function PromoItem({imageURL, description}) {
   return (
     <div className='promo-item'>
       <img className='promo-item__img' src={imageURL} alt='' />
-      <p>{
+      <div>{
         description.map((item, index) => (
           <p
             key={index}
@@ -13,7 +13,7 @@ function PromoItem({imageURL, description}) {
             &#9971; {item}
           </p>
         ))
-      }</p>
+      }</div>
     </div>
   );
 }

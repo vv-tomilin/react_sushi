@@ -12,14 +12,14 @@ function OurRestaurantsPage() {
             <div>
               <div>
                 <p>г. Небывальск, пр-кт. Пупкина, д. 75</p>
-                <p>
+                <div>
                   <span>С 10:00</span>
                   <span> До </span>
                   <span>22:00</span><br/>
                   <p className='our-restaurants-page__phone'>
                     <a href="tel:8999-000-99-99">8 999 000 99 99</a>
                   </p>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -32,14 +32,14 @@ function OurRestaurantsPage() {
             <div>
               <div>
                 <p>г. Чуваковск-на-Халтуре, ул. Калабалы-Бухалы, д. 75</p>
-                <p>
+                <div>
                   <span>С 10:00</span>
                   <span> До </span>
                   <span>22:00</span><br/>
                   <p className='our-restaurants-page__phone'>
                     <a href="tel:8999-000-99-98">8 999 000 99 98</a>
                   </p>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -50,14 +50,14 @@ function OurRestaurantsPage() {
             <div>
               <div>
                 <p>г. Нью-Кворк, б-р. Пыни, д. 75</p>
-                <p>
+                <div>
                   <span>С 10:00</span>
                   <span> До </span>
                   <span>22:00</span><br/>
                   <p className='our-restaurants-page__phone'>
                     <a href="tel:8999-000-99-97">8 999 000 99 97</a>
                   </p>
-                </p>
+                </div>
               </div>
             </div>
           </div>

@@ -22,6 +22,10 @@ function ProductsListBlock({items, isLoaded, onClickAddProduct}) {
                   quantity={obj.quantity}
                   ingridients={obj.ingridients}
                   weight={obj.weight}
+                  energyValue={obj.energyValue}
+                  proteins={obj.proteins}
+                  fats={obj.fats}
+                  carbohydrates={obj.carbohydrates}
                   onClickAddToCart={onClickAddProduct} />
               </li>
             )) :

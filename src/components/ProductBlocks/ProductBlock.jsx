@@ -7,7 +7,17 @@ import {ProductIngridientsPopup} from '../Modals';
 import {iSymbol, cartIconWhite} from '../../assets/logo and icons';
 
 function ProductBlock({
-  id, name, imageURL, price, ingridients, weight, onClickAddToCart,
+  id,
+  name,
+  imageURL,
+  price,
+  ingridients,
+  weight,
+  energyValue,
+  proteins,
+  fats,
+  carbohydrates,
+  onClickAddToCart,
 }) {
   const [visualPopup, setVisualPopup] = React.useState(false);
 
@@ -65,7 +75,11 @@ function ProductBlock({
             <ProductIngridientsPopup
               popupRef={popupRef}
               ingridients={ingridients}
-              weight={weight} />
+              weight={weight}
+              energyValue={energyValue}
+              proteins={proteins}
+              fats={fats}
+              carbohydrates={carbohydrates} />
           }
           <Button
             className='button_ingridients-info'
@@ -94,5 +108,9 @@ ProductBlock.propTypes = {
   price: PropTypes.number,
   ingridients: PropTypes.string,
   weight: PropTypes.number,
+  energyValue: PropTypes.number,
+  proteins: PropTypes.number,
+  fats: PropTypes.number,
+  carbohydrates: PropTypes.number,
   onClickAddToCart: PropTypes.func,
 };

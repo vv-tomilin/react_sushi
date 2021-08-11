@@ -22,18 +22,20 @@ function Header() {
             </Link>
           </div>
 
-          <div className='header__phone-wrapper'>
-            <img
-              className='header__phone-icon'
-              src={phoneIcon} alt='phone_icon'
-              width='28' height='28'/>
-            <div className='header__phone-text-block'>
-              <p className='header__phone-label'>Служба доставки</p>
-              <p className='header__phone'>
+          <a href='tel:89990009999'>
+            <div className='header__phone-wrapper'>
+              <img
+                className='header__phone-icon'
+                src={phoneIcon} alt='phone_icon'
+                width='28' height='28'/>
+              <div className='header__phone-text-block'>
+                <p className='header__phone-label'>Служба доставки</p>
+                <p className='header__phone'>
               +7(999)000-99-99
-              </p>
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
 
           <InformationDesktop/>
 

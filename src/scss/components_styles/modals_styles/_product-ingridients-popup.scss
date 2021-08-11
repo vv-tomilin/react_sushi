@@ -3,6 +3,8 @@
 .product-ingridients-popup {
     position: absolute;
 
+    z-index: 5;
+
     bottom:50px;
     left: 50%;
     margin-left: -45%;
@@ -13,6 +15,8 @@
     background: $additional_color_bg_font;
     border-radius: 10px;
 
+    box-shadow: 0px 5px 10px 3px rgba(34, 60, 80, 0.2);
+
     &__info-wrapper {
         position: relative;
         padding: 25px 0;
@@ -21,17 +25,43 @@
         margin-left: 15px;
     }
 
-        &__ingridients {
-            font-size: 20px;
-            font-weight: 600;
-            color: white;
-        }
+    &__ingridients {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
 
-        &__weight {
-            font-size: 20px;
-            font-weight: 600;
+    &__weight {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin-top: 15px;
+    }
+
+    &__energy-value {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        text-decoration: underline;
+    }
+
+    &__nutrients-value {
+        margin-top: 10px;
+
+        font-size: 14px;
+        font-weight: 900;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            padding: 1px 8px;
+            margin-right: 7px;
+            margin-bottom: 10px;
             color: white;
 
-            margin-top: 15px;
+            border: 2px solid white;
+            border-radius: 50px;
         }
+    }
 }

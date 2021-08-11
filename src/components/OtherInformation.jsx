@@ -55,8 +55,12 @@ function OtherInformation({className, toggleFooterModal}) {
       </div>
 
       <div className={`${className}__other-info-blocks`}>
-        <p>Служба доставки</p>
-        <a>+7(999)000-99-99</a>
+        <a
+          className={`${className}__tel-delivery`}
+          href='tel:89990009999'>
+          <p className={`${className}__tel-delivery`}>Служба доставки</p>
+          <p>+7(999)000-99-99</p>
+        </a>
       </div>
 
       <div className={`${className}__other-info-blocks`}>
