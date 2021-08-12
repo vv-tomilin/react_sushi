@@ -11,6 +11,7 @@ function ProductBlock({
   name,
   imageURL,
   price,
+  quantity,
   ingridients,
   weight,
   energyValue,
@@ -18,6 +19,7 @@ function ProductBlock({
   fats,
   carbohydrates,
   onClickAddToCart,
+  addedCount,
 }) {
   const [visualPopup, setVisualPopup] = React.useState(false);
 
@@ -58,11 +60,12 @@ function ProductBlock({
         <img
           className='product-block__img' src={imageURL}
           width='300' height='170' />
-        <a className='product-block__title' href='#'>{name}</a>
+        <p className='product-block__title'>{name}</p>
+        <p className='product-block__title'>{`${quantity} шт.`}</p>
         <div className='product-block__short-description'>
           <p>
-            {ingridients.length > 50 ?
-            `${ingridients.slice(0, 50)}. . .` :
+            {ingridients.length > 48 ?
+            `${ingridients.slice(0, 48)} . . .` :
             `${ingridients}`}
           </p>
           <span>{weight} г.</span>
@@ -92,6 +95,12 @@ function ProductBlock({
             onClick={onAddProduct} >
             <span>Хочу</span>
             <img src={cartIconWhite}/>
+            {
+              addedCount &&
+                <p className='product-block__added-count'>
+                  <i>{addedCount}</i>
+                </p>
+            }
           </Button>
         </div>
       </div>
@@ -106,6 +115,7 @@ ProductBlock.propTypes = {
   name: PropTypes.string.isRequired,
   imageURL: PropTypes.string,
   price: PropTypes.number,
+  quantity: PropTypes.number,
   ingridients: PropTypes.string,
   weight: PropTypes.number,
   energyValue: PropTypes.number,
@@ -113,4 +123,5 @@ ProductBlock.propTypes = {
   fats: PropTypes.number,
   carbohydrates: PropTypes.number,
   onClickAddToCart: PropTypes.func,
+  addedCount: PropTypes.number,
 };

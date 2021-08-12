@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {useSelector} from 'react-redux';
 
 import {ProductBlock, ProductLoadingBlock} from '../components';
 
 function ProductsListBlock({items, isLoaded, onClickAddProduct}) {
+  const cartItems = useSelector(({cart}) => cart.items);
+
   return (
     <section className='product-list-block'>
       <h2 className='visually-hidden'>
@@ -26,7 +29,12 @@ function ProductsListBlock({items, isLoaded, onClickAddProduct}) {
                   proteins={obj.proteins}
                   fats={obj.fats}
                   carbohydrates={obj.carbohydrates}
-                  onClickAddToCart={onClickAddProduct} />
+                  onClickAddToCart={onClickAddProduct}
+                  addedCount={
+                    cartItems[obj.id] &&
+                    cartItems[obj.id].items.length
+                  }
+                  {...obj} />
               </li>
             )) :
             Array(8)

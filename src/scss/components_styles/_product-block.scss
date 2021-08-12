@@ -118,4 +118,27 @@
         justify-content: space-between;
         align-items: center;
     }
+
+    &__added-count {
+        position: absolute;
+        bottom: 30px;
+        right: -4px;
+
+        padding: 0 7px;
+
+        text-align: center;
+        font-size: 20px;
+
+        background: #f3f3f3;
+        box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+
+        border: 3px solid $additional_color_bg_font;
+        border-radius: 50px;
+        
+        & i {
+            color: black;
+            font-style: normal;
+            font-weight: 900;
+        }
+    }
 }
