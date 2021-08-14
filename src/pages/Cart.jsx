@@ -51,13 +51,13 @@ function Cart() {
     dispatch(removeCartItem(id));
   };
 
-  const onPlusItem = (id) => {
+  const onPlusItem = React.useCallback((id) => {
     dispatch(plusCartItem(id));
-  };
+  }, []);
 
-  const onMinusCartItem = (id) => {
+  const onMinusCartItem = React.useCallback((id) => {
     dispatch(minusCartItem(id));
-  };
+  }, []);
 
   if (redirectHome) {
     return <Redirect to='/'/>;

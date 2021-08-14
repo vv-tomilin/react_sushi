@@ -21,16 +21,16 @@ function App() {
   const mobFooterModalRef = React.useRef();
   const mobFooterToggleRef = React.useRef();
 
-  const toggleFooterModal = () => {
+  const toggleFooterModal = React.useCallback(() => {
     setfooterMobileModal(!footerMobileModal);
-  };
+  });
 
-  const handleOutsideClick = (e) => {
+  const handleOutsideClick = React.useCallback((e) => {
     if (!e.path.includes(mobFooterModalRef.current) &&
         !e.path.includes(mobFooterToggleRef.current)) {
       setfooterMobileModal(false);
     }
-  };
+  });
 
   React.useEffect(() => {
     document.body.addEventListener('click', handleOutsideClick);

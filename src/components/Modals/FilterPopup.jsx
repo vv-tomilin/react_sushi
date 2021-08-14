@@ -1,38 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function FilterPopup({
-  sortRef,
-  items,
-  activeSortType,
-  onClickSortType,
-  setVisiblePopup,
-}) {
-  const onSelectItem = (index) => {
-    if (onClickSortType) {
-      onClickSortType(index);
-      setVisiblePopup(false);
-    }
-  };
-  return (
-    <div
-      className='filter-popup'
-      ref={sortRef} >
-      <ul>
-        {items && items.map((obj, index) => (
-          <li
-            key={index}
-            className={activeSortType === obj.type ?
-            'filter-popup__item filter-popup__item_active' :
-            'filter-popup__item'}
-            onClick={() => onSelectItem(obj)} >
-            {obj.name}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+const FilterPopup = React.memo(
+    function FilterPopup({
+      sortRef,
+      items,
+      activeSortType,
+      onClickSortType,
+      setVisiblePopup,
+    }) {
+      const onSelectItem = React.useCallback((index) => {
+        if (onClickSortType) {
+          onClickSortType(index);
+          setVisiblePopup(false);
+        }
+      });
+      return (
+        <div
+          className='filter-popup'
+          ref={sortRef} >
+          <ul>
+            {items && items.map((obj, index) => (
+              <li
+                key={index}
+                className={activeSortType === obj.type ?
+              'filter-popup__item filter-popup__item_active' :
+              'filter-popup__item'}
+                onClick={() => onSelectItem(obj)} >
+                {obj.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    },
+);
 
 export default FilterPopup;
 

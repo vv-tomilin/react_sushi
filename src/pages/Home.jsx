@@ -32,77 +32,79 @@ const filterItems = [
   {name: 'по алфавиту', type: 'name', order: 'asc'},
 ];
 
-const Home = () => {
-  const dispatch = useDispatch();
+const Home = React.memo(
+    function Home() {
+      const dispatch = useDispatch();
 
-  const items = useSelector(({products}) => products.items);
-  const {category} = useSelector(({category}) => category);
-  const isLoaded = useSelector(({products}) => products.isLoaded);
-  const promoItems = useSelector(({promo}) => promo.promoItems);
-  const activePromoIndex = useSelector(({promo}) => promo.activePromoIndex);
-  const {sortBy} = useSelector(({filters}) => filters);
+      const items = useSelector(({products}) => products.items);
+      const {category} = useSelector(({category}) => category);
+      const isLoaded = useSelector(({products}) => products.isLoaded);
+      const promoItems = useSelector(({promo}) => promo.promoItems);
+      const activePromoIndex = useSelector(({promo}) => promo.activePromoIndex);
+      const {sortBy} = useSelector(({filters}) => filters);
 
-  React.useEffect(() => {
-    dispatch(fetchProducts(sortBy, category));
-  }, [category, sortBy]);
+      React.useEffect(() => {
+        dispatch(fetchProducts(sortBy, category));
+      }, [category, sortBy]);
 
-  React.useEffect(() => {
-    fetchPromo(dispatch);
-  }, [activePromoIndex]);
+      React.useEffect(() => {
+        fetchPromo(dispatch);
+      }, [activePromoIndex]);
 
-  const onSelectCategory = (index) => {
-    dispatch(setCategory(index));
-  };
+      const onSelectCategory = React.useCallback((index) => {
+        dispatch(setCategory(index));
+      });
 
-  const onSelectSortType = (type) => {
-    dispatch(setSortBY(type));
-  };
+      const onSelectSortType = React.useCallback((type) => {
+        dispatch(setSortBY(type));
+      });
 
-  const handleAddProductToCart = (obj) => {
-    dispatch(addproductToCart(obj));
-  };
+      const handleAddProductToCart = React.useCallback((obj) => {
+        dispatch(addproductToCart(obj));
+      });
 
-  return (
-    <div>
-      <main>
-        <h1 className='visually-hidden'>
-          Интернет магазин японской кухни &laquo;SushiZen&raquo;
-        </h1>
+      return (
+        <div>
+          <main>
+            <h1 className='visually-hidden'>
+            Интернет магазин японской кухни &laquo;SushiZen&raquo;
+            </h1>
 
-        <Categories
-          activeCategory = {category}
-          items={categoriesNames}
-          onClickCategory={onSelectCategory}/>
+            <Categories
+              activeCategory = {category}
+              items={categoriesNames}
+              onClickCategory={onSelectCategory}/>
 
-        <div className='home__filters-select-category-wrapper'>
-          <div className='home__filters-wrapper'>
-            <Filters
-              activeSortType={sortBy.type}
-              items={filterItems}
-              onClickSortType={onSelectSortType} />
-          </div>
-          <div className='home__selected-category-wrapper'>
-            <SelectedCategory
-              items={categoriesNames}/>
-          </div>
+            <div className='home__filters-select-category-wrapper'>
+              <div className='home__filters-wrapper'>
+                <Filters
+                  activeSortType={sortBy.type}
+                  items={filterItems}
+                  onClickSortType={onSelectSortType} />
+              </div>
+              <div className='home__selected-category-wrapper'>
+                <SelectedCategory
+                  items={categoriesNames}/>
+              </div>
+            </div>
+            <div className='home__banners-information-wrapper'>
+              <div className='home__banners-wrapper'>
+                <DiscountsBanners
+                  promoItems={promoItems}
+                  className='home__banner-img'/>
+              </div>
+              <div className='home__information-wrapper'>
+                <Information/>
+              </div>
+            </div>
+            <ProductsListBlock
+              items={items}
+              isLoaded={isLoaded}
+              onClickAddProduct={handleAddProductToCart} />
+          </main>
         </div>
-        <div className='home__banners-information-wrapper'>
-          <div className='home__banners-wrapper'>
-            <DiscountsBanners
-              promoItems={promoItems}
-              className='home__banner-img'/>
-          </div>
-          <div className='home__information-wrapper'>
-            <Information/>
-          </div>
-        </div>
-        <ProductsListBlock
-          items={items}
-          isLoaded={isLoaded}
-          onClickAddProduct={handleAddProductToCart} />
-      </main>
-    </div>
-  );
-};
+      );
+    },
+);
 
 export default Home;
