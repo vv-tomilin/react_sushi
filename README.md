@@ -1,4 +1,13 @@
-## Учебный проект "Интернет магазин японской кухни"
+## Учебный проект "Интернет магазин японской кухни" на React.js + Redux
+
+### Stack:
+* React.js + хуки
+* Redux
+* Redux thunk
+* Rect Router
+* json-server
+* Axios
+* classnames
 
 __Этапы реализации:__
 
