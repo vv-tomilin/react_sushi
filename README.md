@@ -1,5 +1,7 @@
 ## Учебный проект "Интернет магазин японской кухни" на React.js + Redux
 
+Посмотреть готовое приложение: https://react-sushi.herokuapp.com/
+
 ### Stack:
 * React.js + хуки
 * Redux
