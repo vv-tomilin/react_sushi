@@ -496,7 +496,7 @@
 
         {
             "id": 42,
-            "imageURL": "https://ic.wampi.ru/2021/08/12/lubopyshka-detskiy.jpg",
+            "imageURL": "https://ic.wampi.ru/2021/08/16/lubopyshka-detskiy.jpg",
             "name": "Любопышка (детский)",
             "category": 4,
             "quantity": 10,
@@ -510,7 +510,7 @@
         },
         {
             "id": 43,
-            "imageURL": "https://ic.wampi.ru/2021/08/12/malysushiki-detskiy.jpg",
+            "imageURL": "https://ic.wampi.ru/2021/08/16/malysushiki-detskiy.jpg",
             "name": "МалыСушики (детский)",
             "category": 4,
             "quantity": 10,
@@ -524,7 +524,7 @@
         },
         {
             "id": 44,
-            "imageURL": "https://ic.wampi.ru/2021/08/12/kak-u-mamy-detskiy.jpg",
+            "imageURL": "https://ic.wampi.ru/2021/08/16/kak-u-mamy-detskiy.jpg",
             "name": "Как у мамы (детский)",
             "category": 4,
             "quantity": 14,
@@ -538,7 +538,7 @@
         },
         {
             "id": 45,
-            "imageURL": "https://ic.wampi.ru/2021/08/12/syr-ok.jpg",
+            "imageURL": "https://ic.wampi.ru/2021/08/16/syr-ok.jpg",
             "name": "Сыр Ок",
             "category": 4,
             "quantity": 8,
