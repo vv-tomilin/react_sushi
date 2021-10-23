@@ -6,7 +6,7 @@
 * React.js + хуки
 * Redux
 * Redux thunk
-* Rect Router
+* React Router
 * json-server
 * Axios
 * classnames
